@@ -47,7 +47,7 @@ export default function LoadlinkConnect() {
         <div className="relative rounded-3xl overflow-hidden min-h-[450px]">
           {/* Background image with parallax */}
           <div 
-            className="absolute inset-[-60px] will-change-transform"
+            className="absolute inset-[-60px] will-change-transform rounded-3xl overflow-hidden"
             style={{ transform: `translateY(${offsetY}px)` }}
           >
             <Image 

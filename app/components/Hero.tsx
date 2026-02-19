@@ -8,6 +8,7 @@ const heroServices = [
   {
     icon: "fa-solid fa-box",
     title: "Book a Parcel",
+    cta: "Start Shipping",
     href: "https://parcelfreight.loadlink.com.au/parcel-freight",
     image: "/images/guy-box.webp",
     bgColor: "bg-white/10",
@@ -17,6 +18,7 @@ const heroServices = [
   {
     icon: "fa-solid fa-truck-moving",
     title: "LoadLink Connect",
+    cta: "Get Free Quote",
     href: "https://portal.loadlink.com.au/register/",
     image: "/images/Truck-2.jpg",
     bgColor: "bg-white/10",
@@ -26,6 +28,7 @@ const heroServices = [
   {
     icon: "fa-solid fa-truck-fast",
     title: "Carriers Loadboard",
+    cta: "View Loadboard",
     href: "https://app.loadlink.com.au/listings/",
     image: "/images/Truck.png",
     bgColor: "bg-white/10",
@@ -52,22 +55,12 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover scale-105"
       >
-        <source src="/images/Videos/Fortis Stockvideo3.mp4" type="video/mp4" />
+        <source src="/images/Videos/Loadlink Homepage Hero Video.mp4" type="video/mp4" />
       </video>
 
       {/* Gradient Overlay */}
       <div className="absolute inset-0 bg-gradient-to-r from-loadlink-navy/90 via-loadlink-navy/70 to-loadlink-navy/40"></div>
       <div className="absolute inset-0 bg-gradient-to-t from-loadlink-navy/60 via-transparent to-transparent"></div>
-
-      {/* Animated grid pattern */}
-      <div
-        className="absolute inset-0 opacity-10"
-        style={{
-          backgroundImage:
-            "linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px)",
-          backgroundSize: "60px 60px",
-        }}
-      ></div>
 
       {/* Content */}
       <div className="relative z-10 w-full px-[5%] md:px-[6%] py-32">
@@ -116,7 +109,7 @@ export default function Hero() {
                 </svg>
               </Link>
               <Link
-                href="#"
+                href="https://youtu.be/9JwxfYZ_8-w?si=vJxQfEYG1onW1oWE"
                 className="group bg-white/10 backdrop-blur-md border border-white/30 text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 inline-flex items-center gap-3"
               >
                 <svg
@@ -184,7 +177,7 @@ export default function Hero() {
                       {service.title}
                     </h3>
                     <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-white/60 bg-white/20 text-white text-sm font-semibold transition-all duration-300 group-hover:bg-white group-hover:text-loadlink-navy">
-                      Learn More
+                      {service.cta}
                       <svg
                         className="w-4 h-4 transition-transform duration-300 group-hover:translate-x-1"
                         fill="none"
@@ -235,7 +228,7 @@ export default function Hero() {
                     {service.title}
                   </h3>
                   <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/80 bg-white/70 text-gray-700 text-xs font-semibold transition-all duration-300 group-hover:bg-white group-hover:text-loadlink-navy">
-                    Learn More
+                    {service.cta}
                     <svg
                       className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
                       fill="none"

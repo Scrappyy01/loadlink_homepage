@@ -93,7 +93,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('accessing')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">1</span>
@@ -162,7 +162,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('dashboard')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">2</span>
@@ -245,7 +245,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('settings')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">3</span>
@@ -350,7 +350,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('setup')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">4</span>
@@ -410,7 +410,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('freight')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">5</span>
@@ -470,7 +470,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('individual')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">6</span>
@@ -506,7 +506,7 @@ export default function WooCommerceIntegration() {
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
                 onClick={() => toggleSection('troubleshooting')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors"
+                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-500 text-white font-bold">7</span>

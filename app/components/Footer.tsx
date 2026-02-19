@@ -5,9 +5,25 @@ import Link from 'next/link';
 import { useReveal } from '../hooks/useReveal';
 
 const footerLinks = {
-  About: ['About Us', 'How It Works', 'Our Guarantees', 'Our Impact', 'Partners', 'Careers', 'Newsroom'],
-  Product: ['Pricing', 'Track Shipment', 'Get a Quote', 'Domestic Delivery', 'International Delivery', 'Returns & Exchanges', 'Business Solutions'],
-  Resources: ['Help Centre', 'Blog', 'Size Guides', 'Service Disruptions', 'Sustainability', 'Community', 'API Documentation'],
+  About: [
+    { label: 'About Us', href: '/abous-us' },
+    { label: 'FAQ', href: '/faq' },
+    { label: 'Partners', href: '/partners' },
+    { label: 'Contact Us', href: '/contact' },
+  ],
+  Services: [
+    { label: 'Parcel Freight', href: '/#services' },
+    { label: 'LoadLink Connect', href: '/#loadlink-connect' },
+    { label: 'Shipping Rates', href: '/#services' },
+    { label: 'Smart Labels', href: '/#smart-labels' },
+    { label: 'Track Shipment', href: '/#tracking' },
+  ],
+  Integrations: [
+    { label: 'Shopify', href: '/intergrations/shopify' },
+    { label: 'WooCommerce', href: '/intergrations/woocommerce' },
+    { label: 'All Integrations', href: '/#connect-ecommerce' },
+    { label: 'Help Centre', href: 'https://www.loadlink.com.au/help/' },
+  ],
 };
 
 const socialLinks = [
@@ -39,7 +55,7 @@ export default function Footer() {
                 />
               </Link>
               <p className="text-sm leading-relaxed text-gray-400 max-w-xs">
-                Loadlink is a certified B Corp committed to carbon-neutral delivery. Connecting businesses with trusted logistics partners across Australia.
+                Australia&apos;s marketplace for moving anything — from single parcels to full loads. Compare rates, book delivery, and track shipments across the country.
               </p>
               {/* Social */}
               <div className="flex items-center gap-3 pt-2">
@@ -62,9 +78,9 @@ export default function Footer() {
                 <h3 className="text-white font-semibold text-sm mb-5 uppercase tracking-wider">{title}</h3>
                 <ul className="space-y-3">
                   {links.map((link) => (
-                    <li key={link}>
-                      <Link href="#" className="text-sm text-gray-400 hover:text-white transition-colors">
-                        {link}
+                    <li key={link.label}>
+                      <Link href={link.href} className="text-sm text-gray-400 hover:text-white transition-colors">
+                        {link.label}
                       </Link>
                     </li>
                   ))}

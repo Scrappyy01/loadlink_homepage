@@ -1,6 +1,7 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
+import { useEffect } from 'react';
 
 interface FormData {
   name: string;
@@ -40,14 +41,35 @@ export default function ContactPage() {
   };
 
   return (
-    <div className="min-h-screen bg-white py-20 px-4">
-      <div className="max-w-2xl mx-auto">
-        <h1 className="text-5xl font-extrabold text-loadlink-navy mb-4 text-center">
-          Get in Touch
-        </h1>
-        <p className="text-center text-gray-600 mb-12">
-          Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
-        </p>
+    <>
+      {/* Hero Banner */}
+      <section className="pt-36 pb-24 px-[5%] md:px-[8%] bg-loadlink-navy relative overflow-hidden">
+        <div
+          className="absolute inset-0 opacity-[0.04]"
+          style={{
+            backgroundImage:
+              'radial-gradient(circle at 1px 1px, white 1px, transparent 0)',
+            backgroundSize: '40px 40px',
+          }}
+        />
+        <div className="absolute top-0 right-0 w-[600px] h-[600px] bg-loadlink-orange/10 rounded-full blur-[120px] -translate-y-1/2 translate-x-1/3" />
+
+        <div className="max-w-4xl mx-auto relative z-10 text-center">
+          <span className="text-loadlink-orange text-sm font-semibold tracking-widest uppercase mb-4 block">
+            Contact Us
+          </span>
+          <h1 className="text-4xl md:text-5xl font-bold text-white leading-tight mb-6">
+            Get in Touch
+          </h1>
+          <p className="text-gray-300 text-lg leading-relaxed">
+            Have questions or need support? We'd love to hear from you. Send us a message and we'll respond as soon as possible.
+          </p>
+        </div>
+      </section>
+
+      {/* Form Section */}
+      <div className="min-h-screen bg-white py-20 px-4">
+        <div className="max-w-2xl mx-auto">
 
         {submitted ? (
           <div className="bg-green-100 border border-green-400 text-green-700 px-8 py-6 rounded-lg text-center mb-8">
@@ -139,20 +161,21 @@ export default function ContactPage() {
           <div className="text-center">
             <i className="fas fa-phone text-loadlink-orange text-3xl mb-4 block"></i>
             <h3 className="font-bold text-loadlink-navy mb-2">Phone</h3>
-            <p className="text-gray-600">+1 (555) 123-4567</p>
+            <p className="text-gray-600">+61 7 5518 8894</p>
           </div>
           <div className="text-center">
             <i className="fas fa-envelope text-loadlink-orange text-3xl mb-4 block"></i>
             <h3 className="font-bold text-loadlink-navy mb-2">Email</h3>
-            <p className="text-gray-600">support@loadlink.com</p>
+            <p className="text-gray-600">admin@loadlink.com.au</p>
           </div>
           <div className="text-center">
             <i className="fas fa-map-marker-alt text-loadlink-orange text-3xl mb-4 block"></i>
             <h3 className="font-bold text-loadlink-navy mb-2">Address</h3>
-            <p className="text-gray-600">123 Logistics Ave, Sydney, Australia</p>
+            <p className="text-gray-600">P0 BOX 3463 Helensvale Town Centre QLD 4212, Australia</p>
           </div>
         </div>
       </div>
     </div>
+    </>
   );
 }

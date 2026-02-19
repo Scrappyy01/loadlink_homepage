@@ -20,7 +20,7 @@ export default function Home() {
         <Features />
         <ConnectEcommerce />
         <BenefitCards />
-        <SmartLabels />
+   
         <LoadlinkConnect />
         <AppDownload />
         <PromoBanner />

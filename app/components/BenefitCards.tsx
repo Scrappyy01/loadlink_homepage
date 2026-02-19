@@ -9,15 +9,17 @@ const features = [
     title: "Smarter Shipping",
     description:
       "Lower costs by up to 47% and increase efficiency through smart, data-backed decisions and seamless multi-carrier integration.",
-    image: "/images/benefit 1.png",
+    image: "/images/SmartLogistics.png",
+    href: "/advantages#smarter-shipping",
     span: "",
     height: "h-[340px]",
   },
   {
-    title: "Consistant Everytime",
+    title: "Consistent Everytime",
     description:
       "Build lasting customer loyalty with real-time tracking, tailored communication, and proactive notifications.",
     image: "/images/guyparcel.jpg",
+    href: "/advantages#consistent-delivery",
     span: "",
     height: "h-[340px]",
   },
@@ -26,6 +28,7 @@ const features = [
     description:
       "Grow your online sales and reach new markets with intelligent shipping and optimised ecommerce integration.",
     image: "/images/benefit 1.png",
+    href: "/advantages#sustainable-growth",
     span: "",
     height: "h-[340px]",
   },
@@ -66,19 +69,19 @@ export default function BenefitCards() {
               />
               
               {/* Gradient Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-loadlink-navy/90 via-loadlink-navy/30 to-transparent transition-all duration-500 group-hover:from-loadlink-navy/95"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-loadlink-navy/90 via-loadlink-navy/40 to-transparent"></div>
               
               {/* Content */}
               <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8">
-                <h3 className="text-xl md:text-2xl font-bold text-white mb-2 transition-transform duration-500 group-hover:-translate-y-2">
+                <h3 className="text-xl md:text-2xl font-bold text-white mb-2">
                   {feature.title}
                 </h3>
-                <p className="text-white/70 text-sm leading-relaxed mb-4 transition-all duration-500 max-h-0 opacity-0 group-hover:max-h-24 group-hover:opacity-100">
+                <p className="text-white/70 text-sm leading-relaxed mb-4">
                   {feature.description}
                 </p>
                 <Link 
-                  href="#"
-                  className="inline-flex items-center gap-2 text-loadlink-orange text-sm font-semibold opacity-0 translate-y-4 group-hover:opacity-100 group-hover:translate-y-0 transition-all duration-500"
+                  href={feature.href}
+                  className="inline-flex items-center gap-2 text-loadlink-orange text-sm font-semibold hover:gap-3 transition-all duration-300"
                 >
                   Learn more
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

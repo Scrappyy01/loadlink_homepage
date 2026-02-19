@@ -27,7 +27,7 @@ export default function PromoBanner() {
                 <strong className="text-loadlink-navy">Ship & Save.</strong>
               </p>
               <Link
-                href="#"
+                href="/advantages"
                 className="inline-flex items-center gap-2 bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-loadlink-navy transition-all duration-300 group"
               >
                 Read more
