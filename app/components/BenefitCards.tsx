@@ -8,16 +8,16 @@ const features = [
   {
     title: "Smarter Shipping",
     description:
-      "Lower freight costs and increase efficiency through smart, data-backed decisions and seamless multi-carrier integration.",
+      "Lower costs by up to 47% and increase efficiency through smart, data-backed decisions and seamless multi-carrier integration.",
     image: "/images/benefit 1.png",
     span: "",
     height: "h-[340px]",
   },
   {
-    title: "Exceed Expectations",
+    title: "Consistant Everytime",
     description:
       "Build lasting customer loyalty with real-time tracking, tailored communication, and proactive notifications.",
-    image: "/images/benefit 2.png",
+    image: "/images/guyparcel.jpg",
     span: "",
     height: "h-[340px]",
   },
@@ -25,7 +25,7 @@ const features = [
     title: "Drive Sustainable Growth",
     description:
       "Grow your online sales and reach new markets with intelligent shipping and optimised ecommerce integration.",
-    image: "/images/loadlink_connect.webp",
+    image: "/images/benefit 1.png",
     span: "",
     height: "h-[340px]",
   },

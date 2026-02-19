@@ -14,7 +14,7 @@ export default function WooCommerceIntegration() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
-      <section className="py-16 px-[5%] bg-gradient-to-r from-loadlink-orange to-[#e67e22]">
+      <section className="py-16 px-[5%]" style={{ background: 'linear-gradient(180deg, #0B1E3F 0%, #132B55 100%)' }}>
         <div className="max-w-5xl mx-auto">
           <div className="flex items-center justify-between flex-wrap gap-8">
             <div className="flex-1 min-w-[300px]">

@@ -22,7 +22,7 @@ html {
 
 body {
   margin: 0;
-  font-family: 'Inter', 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  font-family: var(--font-inter), 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
   color: var(--text-gray);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;

@@ -6,7 +6,7 @@ import { useReveal } from '../hooks/useReveal';
 
 const integrations = [
   { src: "/images/shopify-2.svg", alt: "Shopify", comingSoon: false, href: "/intergrations/shopify", description: "Connect your Shopify store for automated shipping.", featured: true },
-  { src: "/images/woocommerce-svgrepo-com.svg", alt: "WooCommerce", comingSoon: false, href: "/intergrations/woocommerce", description: "Seamless WooCommerce plugin with live rates.", featured: true },
+  { src: "/images/woocommerce.webp", alt: "WooCommerce", comingSoon: false, href: "/intergrations/woocommerce", description: "Seamless WooCommerce plugin with live rates.", featured: true },
   { src: "/images/ebay.svg", alt: "Ebay", comingSoon: true, description: "eBay marketplace integration coming soon." },
   { src: "/images/ShipStation_Logo_0.svg", alt: "Shipstation", comingSoon: true, description: "ShipStation connection in development." },
   { src: "/images/Shippo.png", alt: "Shippo", comingSoon: true, description: "Shippo integration on the roadmap." },

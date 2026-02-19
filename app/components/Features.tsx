@@ -27,13 +27,13 @@ const features = [
     icon: 'fa-solid fa-headset',
     title: '24/7 Support',
     description: 'Expert help whenever you need it. Our dedicated support team is available around the clock for any questions.',
-    image: '/images/benefit 1.png',
+    image: '/images/tech-support.jpg',
   },
   {
     icon: 'fa-solid fa-laptop-code',
     title: 'Easy Integration',
     description: 'Connect your ecommerce platform seamlessly. Simple API integration and pre-built plugins make setup quick.',
-    image: '/images/benefit 2.png',
+    image: '/images/ecommerce_pc.png',
   },
 ];
 
@@ -81,7 +81,7 @@ export default function Features() {
               <button
                 key={feature.title}
                 onClick={() => changeFeature(index)}
-                className={`w-full text-left p-5 rounded-2xl transition-all duration-500 group ${
+                className={`w-full text-left p-5 rounded-2xl transition-all duration-500 group cursor-pointer ${
                   index === activeIndex
                     ? 'bg-white shadow-xl border border-gray-200'
                     : 'hover:bg-white/50 border border-transparent'
@@ -93,28 +93,31 @@ export default function Features() {
                   }`}>
                     <i className={`${feature.icon} text-lg ${index === activeIndex ? 'text-white' : 'text-gray-500'}`}></i>
                   </div>
-                  <div>
+                  <div className="flex-1 min-w-0">
                     <h3 className={`text-lg font-semibold mb-1 transition-colors duration-300 ${
                       index === activeIndex ? 'text-loadlink-navy' : 'text-gray-600'
                     }`}>
                       {feature.title}
                     </h3>
-                    <p className={`text-sm leading-relaxed transition-all duration-500 overflow-hidden ${
-                      index === activeIndex ? 'text-gray-500 max-h-24 opacity-100' : 'max-h-0 opacity-0'
-                    }`}>
-                      {feature.description}
-                    </p>
+                    <div className="h-10 overflow-hidden">
+                      <p className={`text-sm leading-relaxed transition-all duration-500 ${
+                        index === activeIndex ? 'text-gray-500 opacity-100 translate-y-0' : 'opacity-0 translate-y-2'
+                      }`}>
+                        {feature.description}
+                      </p>
+                    </div>
                   </div>
                 </div>
-                {/* Progress bar */}
-                {index === activeIndex && (
-                  <div className="mt-4 ml-16 h-1 bg-gray-100 rounded-full overflow-hidden">
-                    <div className="h-full bg-loadlink-orange rounded-full animate-[progress_5s_linear]" 
+                {/* Progress bar - always rendered to prevent layout shift */}
+                <div className="mt-4 ml-16 h-1 bg-gray-100 rounded-full overflow-hidden">
+                  {index === activeIndex && (
+                    <div
+                      className="h-full bg-loadlink-orange rounded-full"
                       style={{ animation: 'progress 5s linear' }}
                       key={activeIndex}
                     ></div>
-                  </div>
-                )}
+                  )}
+                </div>
               </button>
             ))}
           </div>

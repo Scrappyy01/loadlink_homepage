@@ -19,8 +19,8 @@ export default function Home() {
         <Partners />
 
         <Features />
-        <BenefitCards />
         <ConnectEcommerce />
+        <BenefitCards />
         <SmartLabels />
         <LoadlinkConnect />
         <AppDownload />
