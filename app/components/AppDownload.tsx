@@ -37,7 +37,7 @@ export default function AppDownload() {
       </div>
 
       <div className="max-w-6xl mx-auto relative">
-          <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+        <div className="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
           {/* Content */}
           <div className="flex-1 reveal-left">
             <div className="text-center lg:text-left mb-10">
