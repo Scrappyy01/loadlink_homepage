@@ -1,10 +1,21 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import type { Metadata } from 'next';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Our Guarantee | LoadLink',
-  description: "LoadLink's promise to shippers and carriers across Australia — a modern marketplace built to make moving anything simple, safe, and cost-effective.",
+  title: 'Our Guarantee',
+  description:
+    "LoadLink's promise to shippers and carriers across Australia — a modern marketplace built to make moving anything simple, safe, and cost-effective.",
+  alternates: {
+    canonical: '/about-us',
+  },
+  openGraph: {
+    title: 'Our Guarantee | LoadLink Australia',
+    description:
+      "LoadLink's promise — a modern marketplace built to make moving anything simple, safe, and cost-effective.",
+    url: 'https://www.loadlink.com.au/about-us',
+  },
 };
 
 const pillars = [
@@ -323,6 +334,7 @@ export default function OurGuaranteePage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

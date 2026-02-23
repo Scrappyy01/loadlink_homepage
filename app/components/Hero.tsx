@@ -56,6 +56,7 @@ export default function Hero() {
         className="absolute inset-0 w-full h-full object-cover scale-105"
       >
         <source src="/images/Videos/Loadlink Homepage Hero Video.mp4" type="video/mp4" />
+        <track kind="descriptions" label="Visual description of LoadLink hero video" />
       </video>
 
       {/* Gradient Overlay */}
@@ -163,7 +164,7 @@ export default function Hero() {
                   <div className="absolute inset-0 opacity-40 group-hover:opacity-55 transition-opacity duration-300">
                     <Image
                       src={service.image}
-                      alt=""
+                      alt={service.title}
                       fill
                       className="object-cover"
                     />
@@ -171,11 +172,11 @@ export default function Hero() {
 
                   {/* Content */}
                   <div className="relative z-10">
-                    <h3
+                    <h2
                       className={`text-2xl font-bold ${service.iconColor} mb-3 leading-tight`}
                     >
                       {service.title}
-                    </h3>
+                    </h2>
                     <span className="inline-flex items-center gap-1.5 px-4 py-1.5 rounded-full border border-white/60 bg-white/20 text-white text-sm font-semibold transition-all duration-300 group-hover:bg-white group-hover:text-loadlink-navy">
                       {service.cta}
                       <svg
@@ -214,7 +215,7 @@ export default function Hero() {
                 <div className="absolute inset-0 opacity-40 group-hover:opacity-55 transition-opacity duration-300">
                   <Image
                     src={service.image}
-                    alt=""
+                    alt={service.title}
                     fill
                     className="object-cover"
                   />
@@ -222,11 +223,11 @@ export default function Hero() {
 
                 {/* Content */}
                 <div className="relative z-10">
-                  <h3
+                  <h2
                     className={`text-base font-bold ${service.iconColor} mb-2 leading-tight px-1`}
                   >
                     {service.title}
-                  </h3>
+                  </h2>
                   <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/80 bg-white/70 text-gray-700 text-xs font-semibold transition-all duration-300 group-hover:bg-white group-hover:text-loadlink-navy">
                     {service.cta}
                     <svg

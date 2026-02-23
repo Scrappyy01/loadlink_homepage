@@ -2,6 +2,7 @@
 
 import { FormEvent, useState } from 'react';
 import { useEffect } from 'react';
+import Footer from '../components/Footer';
 
 interface FormData {
   name: string;
@@ -176,6 +177,7 @@ export default function ContactPage() {
         </div>
       </div>
     </div>
+      <Footer />
     </>
   );
 }

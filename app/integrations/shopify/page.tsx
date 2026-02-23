@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { useState } from 'react';
+import Footer from '../../components/Footer';
 
 export default function WooCommerceIntegration() {
   const [openSection, setOpenSection] = useState<string | null>('accessing');
@@ -12,6 +13,7 @@ export default function WooCommerceIntegration() {
   };
 
   return (
+    <>
     <div className="min-h-screen bg-gradient-to-b from-gray-50 to-white">
       {/* Hero Section */}
       <section className="py-16 px-[5%]" style={{ background: 'linear-gradient(180deg, #0B1E3F 0%, #132B55 100%)' }}>
@@ -585,5 +587,7 @@ export default function WooCommerceIntegration() {
         </div>
       </section>
     </div>
+      <Footer />
+    </>
   );
 }

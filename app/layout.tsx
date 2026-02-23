@@ -33,6 +33,9 @@ export const metadata: Metadata = {
   description: 'Compare shipping rates, book parcel delivery, and access freight services across Australia. LoadLink connects you with trusted carriers and competitive pricing — from parcels to full loads.',
   keywords: ['parcel freight', 'shipping Australia', 'logistics marketplace', 'ecommerce shipping', 'courier comparison', 'freight quotes', 'LoadLink', 'delivery services Australia'],
   metadataBase: new URL('https://www.loadlink.com.au'),
+  alternates: {
+    canonical: '/',
+  },
   openGraph: {
     title: 'LoadLink | Parcel Freight & Logistics Marketplace Australia',
     description: 'Compare shipping rates, book parcel delivery, and access freight services across Australia.',
@@ -40,15 +43,31 @@ export const metadata: Metadata = {
     siteName: 'LoadLink',
     locale: 'en_AU',
     type: 'website',
+    images: [
+      {
+        url: 'https://www.loadlink.com.au/images/og-image.png',
+        width: 1200,
+        height: 630,
+        alt: 'LoadLink — Australia\'s Parcel Freight & Logistics Marketplace',
+      },
+    ],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'LoadLink | Parcel Freight & Logistics Marketplace Australia',
     description: 'Compare shipping rates, book parcel delivery, and access freight services across Australia.',
+    images: ['https://www.loadlink.com.au/images/og-image.png'],
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      'max-video-preview': -1,
+      'max-image-preview': 'large',
+      'max-snippet': -1,
+    },
   },
   icons: {
     icon: '/favicon-loadlink-270x270.png',

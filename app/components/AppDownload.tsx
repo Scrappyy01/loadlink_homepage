@@ -82,9 +82,10 @@ export default function AppDownload() {
               <Link
                 href="https://parcelfreight.loadlink.com.au"
                 target="_blank"
+                rel="noopener noreferrer"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-loadlink-orange text-white font-semibold rounded-full hover:bg-loadlink-orange/90 transition-all hover:scale-105 shadow-lg shadow-loadlink-orange/20"
               >
-                <i className="fa-solid fa-arrow-right"></i>
+                <i className="fa-solid fa-arrow-right" aria-hidden="true"></i>
                 Open on Mobile
               </Link>
             </div>

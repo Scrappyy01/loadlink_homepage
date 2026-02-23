@@ -6,10 +6,11 @@ import { useReveal } from '../hooks/useReveal';
 
 const footerLinks = {
   About: [
-    { label: 'About Us', href: '/abous-us' },
+    { label: 'About Us', href: '/about-us' },
     { label: 'FAQ', href: '/faq' },
     { label: 'Partners', href: '/partners' },
     { label: 'Contact Us', href: '/contact' },
+    { label: 'Advantages', href: '/advantages' },
   ],
   Services: [
     { label: 'Parcel Freight', href: '/#services' },
@@ -19,10 +20,14 @@ const footerLinks = {
     { label: 'Track Shipment', href: '/#tracking' },
   ],
   Integrations: [
-    { label: 'Shopify', href: '/intergrations/shopify' },
-    { label: 'WooCommerce', href: '/intergrations/woocommerce' },
+    { label: 'Shopify', href: '/integrations/shopify' },
+    { label: 'WooCommerce', href: '/integrations/woocommerce' },
     { label: 'All Integrations', href: '/#connect-ecommerce' },
     { label: 'Help Centre', href: 'https://www.loadlink.com.au/help/' },
+  ],
+  Legal: [
+    { label: 'Privacy Policy', href: '/privacy-policy' },
+    { label: 'Terms of Use', href: '/terms-and-conditions' },
   ],
 };
 
@@ -41,7 +46,7 @@ export default function Footer() {
       {/* Main */}
       <div className="px-[5%] md:px-[8%] py-16 md:py-20">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-10 lg:gap-8 stagger-children">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-6 gap-10 lg:gap-8 stagger-children">
             
             {/* Brand */}
             <div className="lg:col-span-2 space-y-5">
@@ -96,9 +101,9 @@ export default function Footer() {
         <div className="max-w-6xl mx-auto px-[5%] md:px-[8%] py-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-3 text-xs text-gray-500">
             <div className="flex flex-wrap items-center gap-4">
-              <Link href="#" className="hover:text-white transition-colors">Terms of Use</Link>
+              <Link href="/terms-and-conditions" className="hover:text-white transition-colors">Terms of Use</Link>
               <span className="text-gray-700">·</span>
-              <Link href="#" className="hover:text-white transition-colors">Privacy Policy</Link>
+              <Link href="/privacy-policy" className="hover:text-white transition-colors">Privacy Policy</Link>
             </div>
             <span>© {new Date().getFullYear()} Loadlink. All rights reserved.</span>
           </div>

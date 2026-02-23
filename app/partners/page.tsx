@@ -1,10 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Our Partners | LoadLink',
-  description: 'LoadLink works with Australia\'s leading carriers and ecommerce platforms — including FedEx, Couriers Please, Direct Couriers, Hunter Express, Shopify, and WooCommerce.',
+  title: 'Our Partners',
+  description:
+    'LoadLink works with Australia\'s leading carriers and ecommerce platforms — including FedEx, Couriers Please, Direct Couriers, Hunter Express, Shopify, and WooCommerce.',
+  alternates: {
+    canonical: '/partners',
+  },
+  openGraph: {
+    title: 'Our Partners | LoadLink Australia',
+    description:
+      'Meet LoadLink\'s trusted carrier and ecommerce partners across Australia.',
+    url: 'https://www.loadlink.com.au/partners',
+  },
 };
 
 const deliveryPartners = [
@@ -65,7 +76,7 @@ const ecommercePartners = [
     highlight: 'Real-time rates at checkout & label printing',
     color: 'border-green-500',
     badge: 'bg-green-50 text-green-700',
-    integrationHref: '/intergrations/shopify',
+    integrationHref: '/integrations/shopify',
   },
   {
     src: '/images/woocommerce).png',
@@ -77,7 +88,7 @@ const ecommercePartners = [
     highlight: 'Live shipping quotes & automated booking',
     color: 'border-indigo-500',
     badge: 'bg-indigo-50 text-indigo-700',
-    integrationHref: '/intergrations/woocommerce',
+    integrationHref: '/integrations/woocommerce',
   },
 ];
 
@@ -236,7 +247,7 @@ export default function PartnersPage() {
               Get in Touch
             </Link>
             <Link
-              href="/abous-us"
+              href="/about-us"
               className="border border-white/20 text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-colors duration-300"
             >
               Learn About LoadLink
@@ -244,6 +255,7 @@ export default function PartnersPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

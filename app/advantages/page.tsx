@@ -1,11 +1,21 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'Your Competitive Advantage | LoadLink',
+  title: 'Your Competitive Advantage',
   description:
     'Discover how LoadLink helps businesses ship smarter, deliver consistently, and drive sustainable growth — with lower costs, real-time tracking, and seamless ecommerce integration.',
+  alternates: {
+    canonical: '/advantages',
+  },
+  openGraph: {
+    title: 'Your Competitive Advantage | LoadLink Australia',
+    description:
+      'Ship smarter, deliver consistently, and drive sustainable growth with LoadLink.',
+    url: 'https://www.loadlink.com.au/advantages',
+  },
 };
 
 const advantages = [
@@ -273,6 +283,7 @@ export default function AdvantagesPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

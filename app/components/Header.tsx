@@ -19,8 +19,8 @@ const navItems = [
     label: 'Integrations',
     href: '#',
     children: [
-      { label: 'Shopify', href: '/intergrations/shopify', description: 'Connect your Shopify store' },
-      { label: 'WooCommerce', href: '/intergrations/woocommerce', description: 'Connect your WooCommerce store' },
+      { label: 'Shopify', href: '/integrations/shopify', description: 'Connect your Shopify store' },
+      { label: 'WooCommerce', href: '/integrations/woocommerce', description: 'Connect your WooCommerce store' },
       { label: 'All Integrations', href: '/#connect-ecommerce', description: 'View all ecommerce integrations' },
     ],
   },
@@ -28,7 +28,7 @@ const navItems = [
     label: 'About',
     href: '#',
     children: [
-      { label: 'About Us', href: '/abous-us', description: 'Learn about LoadLink' },
+      { label: 'About Us', href: '/about-us', description: 'Learn about LoadLink' },
       { label: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
       { label: 'Partners', href: '/partners', description: 'Our delivery partners' },
       { label: 'Our Advantages', href: '/advantages', description: 'Why businesses choose LoadLink' },

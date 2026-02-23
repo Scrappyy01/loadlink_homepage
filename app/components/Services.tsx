@@ -96,7 +96,7 @@ export default function Services() {
                 <div className="relative w-24 h-24 md:w-28 md:h-28 flex-shrink-0 rounded-xl overflow-hidden bg-white shadow-sm">
                   <Image
                     src={service.image}
-                    alt=""
+                    alt={service.title}
                     fill
                     className="object-cover"
                   />
@@ -110,6 +110,7 @@ export default function Services() {
                 >
                   <i
                     className={`${service.icon} text-xl ${service.iconColor} transition-colors duration-500`}
+                    aria-hidden="true"
                   ></i>
                 </div>
 

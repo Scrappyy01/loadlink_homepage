@@ -1,9 +1,20 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
+import Footer from '../components/Footer';
 
 export const metadata: Metadata = {
-  title: 'About Us | LoadLink',
-  description: "LoadLink is Australia's freight movement, transport and logistics marketplace. Founded in 2022, we connect shippers and carriers across Australia.",
+  title: 'FAQ — Frequently Asked Questions',
+  description:
+    "Find answers to common questions about LoadLink — Australia's freight and logistics marketplace. Learn about shipping, pricing, cargo types, and support.",
+  alternates: {
+    canonical: '/faq',
+  },
+  openGraph: {
+    title: 'FAQ | LoadLink Australia',
+    description:
+      'Find answers to common questions about LoadLink — shipping, pricing, cargo types, and support.',
+    url: 'https://www.loadlink.com.au/faq',
+  },
 };
 
 const sections = [
@@ -12,6 +23,7 @@ const sections = [
     items: [
       {
         question: 'What Is Loadlink?',
+        plainText: "LoadLink is Australia's marketplace for moving anything. Whether it's a small parcel, a pallet of goods, or a full truck load, LoadLink makes it easy to find the best delivery solutions and competitive pricing in minutes. Founded in 2022, LoadLink was created to solve a real problem — the overwhelming need for an easy-to-use platform where anyone can list what needs to be moved and get access to the best transport options available. Whether you're shipping one parcel or one hundred, LoadLink helps you find the right solution at the best price.",
         answer: (
           <>
             <p>LoadLink is Australia&apos;s marketplace for moving anything. Whether it&apos;s a small parcel, a pallet of goods, or a full truck load, LoadLink makes it easy to find the best delivery solutions and competitive pricing in minutes.</p>
@@ -24,12 +36,14 @@ const sections = [
       },
       {
         question: 'Who Is LoadLink For?',
+        plainText: "LoadLink is designed for anyone who needs to move goods — from individuals sending a single parcel, to small ecommerce businesses, to large enterprises with complex supply chains. Our simple platform works whether you ship once a year or multiple times a day.",
         answer: (
           <p>LoadLink is designed for anyone who needs to move goods — from individuals sending a single parcel, to small ecommerce businesses, to large enterprises with complex supply chains. Our simple platform works whether you ship once a year or multiple times a day.</p>
         ),
       },
       {
         question: 'Why Should I Join LoadLink?',
+        plainText: 'LoadLink gives you access to multiple delivery options in one place, helping you compare pricing and find the best solution for your shipment needs. Our platform is transparent and easy to use, with verified transport providers and competitive rates. We handle the heavy lifting so you can focus on your business.',
         answer: (
           <>
             <p>LoadLink gives you access to multiple delivery options in one place, helping you compare pricing and find the best solution for your shipment needs.</p>
@@ -39,6 +53,7 @@ const sections = [
       },
       {
         question: 'What Kinds Of Cargo Can I Transport Using LoadLink?',
+        plainText: 'LoadLink supports any type of shipment — from small parcels to heavy haulage. Whether you have a single package, a pallet, or a full truck load, we have transport solutions for you. Common shipments include: parcels and packages, palletised goods, furniture and appliances, cars, boats and motorcycles, industrial machinery and equipment, construction materials, livestock, and specialized freight.',
         answer: (
           <>
             <p>LoadLink supports any type of shipment — from small parcels to heavy haulage. Whether you have a single package, a pallet, or a full truck load, we have transport solutions for you.</p>
@@ -54,6 +69,7 @@ const sections = [
     items: [
       {
         question: 'Can You Help Me?',
+        plainText: 'Get support immediately with our team. Email info@loadlink.com.au, call 07 5518 8894, or use our online contact form to get in touch.',
         answer: (
           <>
             <p>Get support immediately with our team.</p>
@@ -73,6 +89,7 @@ const sections = [
       },
       {
         question: "I'm Having Trouble Logging In",
+        plainText: "The user interface of your device can sometimes interfere with logging in to your account. Deleting your cache may be of assistance. Alternatively, please try to use another device. If the problem still persists, contact us. For a complete list of help and support articles visit the Help and Support Centre.",
         answer: (
           <>
             <p>The user interface of your device can sometimes interfere with logging in to your account. Deleting your cache may be of assistance.</p>
@@ -95,6 +112,7 @@ const sections = [
     items: [
       {
         question: 'LoadLink Fees',
+        plainText: 'It is completely free for shippers to list a load with LoadLink! Our trusted Carriers are charged a monthly, quarterly or yearly subscription fee which you can find on our pricing page.',
         answer: (
           <>
             <p>It is completely <span className="font-semibold text-emerald-600">free</span> for shippers to list a load with LoadLink!</p>
@@ -123,8 +141,32 @@ const stats = [
 ];
 
 export default function AboutUsPage() {
+  // Build FAQ structured data for Google rich results
+  const faqStructuredData = {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: sections.flatMap((section) =>
+      section.items.map((item) => ({
+        '@type': 'Question',
+        name: item.question,
+        acceptedAnswer: {
+          '@type': 'Answer',
+          // Strip JSX to plain text for structured data
+          text: item.plainText,
+        },
+      }))
+    ),
+  };
+
   return (
     <>
+      {/* FAQ Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(faqStructuredData),
+        }}
+      />
       {/* Hero */}
       <section className="pt-36 pb-24 px-[5%] md:px-[8%] bg-loadlink-navy relative overflow-hidden">
         <div className="absolute inset-0 opacity-[0.04]" style={{ backgroundImage: 'radial-gradient(circle at 1px 1px, white 1px, transparent 0)', backgroundSize: '40px 40px' }} />
@@ -206,6 +248,7 @@ export default function AboutUsPage() {
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }

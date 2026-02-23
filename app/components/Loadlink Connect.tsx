@@ -66,9 +66,9 @@ export default function LoadlinkConnect() {
             <span className="text-loadlink-orange text-sm font-semibold tracking-widest uppercase mb-4 block">
               Freight Marketplace
             </span>
-            <h3 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
+            <h2 className="text-4xl md:text-5xl font-bold text-white mb-4 leading-tight">
               Loadlink Connect
-            </h3>
+            </h2>
             <p className="text-gray-300 text-lg mb-3 leading-relaxed">
               Your one stop for getting your freight hauled or finding freight to haul.
             </p>
@@ -78,7 +78,7 @@ export default function LoadlinkConnect() {
             
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="#" 
+                href="https://app.loadlink.com.au/listings/" 
                 className="inline-flex items-center gap-3 bg-loadlink-orange text-white py-3.5 px-8 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-all duration-300 group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 640 512">
@@ -87,7 +87,7 @@ export default function LoadlinkConnect() {
                 List freight
               </Link>
               <Link 
-                href="#" 
+                href="https://app.loadlink.com.au/search/" 
                 className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white py-3.5 px-8 rounded-full font-semibold border border-white/20 hover:bg-white hover:text-loadlink-navy transition-all duration-300 group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 448 512">

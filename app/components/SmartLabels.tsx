@@ -21,7 +21,7 @@ export default function SmartLabels() {
             {/* Icon side */}
             <div className="flex-shrink-0">
               <div className="w-24 h-24 md:w-32 md:h-32 rounded-2xl bg-white/10 backdrop-blur-sm flex items-center justify-center border border-white/10">
-                <i className="fa-solid fa-map-location-dot text-5xl md:text-6xl text-loadlink-orange"></i>
+                <i className="fa-solid fa-map-location-dot text-5xl md:text-6xl text-loadlink-orange" aria-hidden="true"></i>
               </div>
             </div>
 
@@ -37,7 +37,7 @@ export default function SmartLabels() {
                 Experience absolute precision with our <strong className="text-white">Smart Labels</strong>. Locate and monitor your shipments with live updates every step of the way.
               </p>
               <Link 
-                href="#" 
+                href="/advantages" 
                 className="inline-flex items-center gap-2 bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-all duration-300 group"
               >
                 Learn More
