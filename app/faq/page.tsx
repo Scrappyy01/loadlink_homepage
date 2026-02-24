@@ -1,6 +1,7 @@
 import Link from 'next/link';
 import type { Metadata } from 'next';
 import Footer from '../components/Footer';
+import FaqAccordion from './FaqAccordion';
 
 export const metadata: Metadata = {
   title: 'FAQ — Frequently Asked Questions',
@@ -62,6 +63,154 @@ const sections = [
           </>
         ),
       },
+      {
+        question: 'How Quickly Can I Get Started With LoadLink?',
+        answer: (
+          <p>Start shipping your parcels in just minutes with simple set-ups. For more complex operations, our onboarding and logistics experts will help your organisation get up and running on a schedule that meets your needs. Book a demo and learn more.</p>
+        ),
+      },
+      {
+        question: 'Can I Use My Own Carrier Accounts?',
+        answer: (
+          <p>Yes, you can use your rates with existing carriers or benefit from our pre-negotiated rates with Australia&apos;s leading carriers.</p>
+        ),
+      },
+      {
+        question: 'How Will LoadLink Support My Business?',
+        answer: (
+          <>
+            <p>Your success is our success. We provide dedicated support from onboarding to expert consultation and extensive help centre documentation.</p>
+            <Link
+              href="/#connect-ecommerce"
+              className="inline-flex items-center gap-2 mt-4 bg-loadlink-orange text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-loadlink-navy transition-colors duration-300"
+            >
+              See Our Integrations
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </>
+        ),
+      },
+      {
+        question: 'How Does LoadLink Work?',
+        answer: (
+          <p>LoadLink is a shipping and fulfilment software platform that connects your preferred carriers with your existing commerce systems. It automates carrier allocation, label generation, bookings, and tracking across multiple carriers. With LoadLink Fleet, our fleet management solution, you can also connect and optimise your own fleet.</p>
+        ),
+      },
+      {
+        question: 'How Much Does LoadLink Cost?',
+        answer: (
+          <>
+            <p>We offer various plans to fit your business size, volume, and delivery goals.</p>
+            <Link
+              href="#"
+              className="inline-flex items-center gap-2 mt-4 bg-loadlink-orange text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-loadlink-navy transition-colors duration-300"
+            >
+              See Pricing Plans
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </>
+        ),
+      },
+      {
+        question: 'Can I Partner With LoadLink?',
+        answer: (
+          <>
+            <p>We believe that exceptional shipping experiences come from deep integrations and collaboration. We warmly welcome partners to join our growing ecosystem.</p>
+            <Link
+              href="/contact"
+              className="inline-flex items-center gap-2 mt-4 bg-loadlink-orange text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-loadlink-navy transition-colors duration-300"
+            >
+              Contact Us
+              <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+              </svg>
+            </Link>
+          </>
+        ),
+      },
+    ],
+  },
+  {
+    category: 'Trade Account',
+    items: [
+      {
+        question: 'What Is A Trade Account With LoadLink?',
+        answer: (
+          <p>A Trade Account with LoadLink gives businesses access to enhanced shipping features, custom rates, and priority support. This account type is designed for companies that require a more tailored and efficient shipping solution.</p>
+        ),
+      },
+      {
+        question: 'How Do I Apply For A Trade Account?',
+        answer: (
+          <p>You can apply for a Trade Account by completing the application form on the LoadLink website. Once submitted, our team will review your details and get back to you with further steps.</p>
+        ),
+      },
+      {
+        question: 'What Do I Need To Apply For A Trade Account?',
+        answer: (
+          <p>To apply for a Trade Account, you&apos;ll need to provide essential business information, including your business name, ABN (Australian Business Number), and any relevant shipping details. This will help us tailor our services to your specific needs.</p>
+        ),
+      },
+      {
+        question: 'Are There Any Costs Associated With A Trade Account?',
+        answer: (
+          <p>There are no upfront costs to apply for a Trade Account. However, different plans may be available depending on your shipping volume and needs, and these may come with associated fees based on your business requirements.</p>
+        ),
+      },
+      {
+        question: 'How Long Does It Take To Be Approved For A Trade Account?',
+        answer: (
+          <p>Typically, Trade Account applications are processed within a few business days. If we need any additional information, we&apos;ll get in touch with you promptly.</p>
+        ),
+      },
+      {
+        question: 'What Are The Benefits Of Having A Trade Account?',
+        answer: (
+          <>
+            <p>A Trade Account offers several advantages, including:</p>
+            <ul className="mt-3 space-y-2 list-none">
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
+                Access to custom pricing and shipping rates
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
+                Priority support from our team
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
+                Flexible shipping options tailored to your business
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
+                Integration with your existing systems for seamless operations
+              </li>
+            </ul>
+          </>
+        ),
+      },
+      {
+        question: 'Can I Manage My Trade Account Online?',
+        answer: (
+          <p>Yes, once your Trade Account is approved, you&apos;ll have access to our online portal where you can manage your shipments, view reports, and update your details whenever needed.</p>
+        ),
+      },
+      {
+        question: 'Is There A Minimum Shipping Volume Required To Apply For A Trade Account?',
+        answer: (
+          <p>While there&apos;s no strict minimum shipping volume, Trade Accounts are best suited for businesses with consistent shipping needs. Our team will assess your requirements based on your application.</p>
+        ),
+      },
+      {
+        question: 'Can I Upgrade Or Downgrade My Trade Account?',
+        answer: (
+          <p>Yes, you can upgrade or downgrade your Trade Account based on your business needs. Our support team can guide you through the process to ensure the plan that best suits your requirements.</p>
+        ),
+      },
     ],
   },
   {
@@ -70,6 +219,7 @@ const sections = [
       {
         question: 'Can You Help Me?',
         plainText: 'Get support immediately with our team. Email info@loadlink.com.au, call 07 5518 8894, or use our online contact form to get in touch.',
+        alwaysOpen: true,
         answer: (
           <>
             <p>Get support immediately with our team.</p>
@@ -113,6 +263,7 @@ const sections = [
       {
         question: 'LoadLink Fees',
         plainText: 'It is completely free for shippers to list a load with LoadLink! Our trusted Carriers are charged a monthly, quarterly or yearly subscription fee which you can find on our pricing page.',
+        alwaysOpen: true,
         answer: (
           <>
             <p>It is completely <span className="font-semibold text-emerald-600">free</span> for shippers to list a load with LoadLink!</p>
@@ -194,35 +345,7 @@ export default function AboutUsPage() {
 
       {/* Content */}
       <section className="py-24 px-[5%] md:px-[8%] bg-gray-50">
-        <div className="max-w-6xl mx-auto space-y-16">
-          {sections.map((section) => (
-            <div key={section.category}>
-              {/* Category heading */}
-              <div className="flex items-center gap-4 mb-8">
-                <span className="text-loadlink-orange text-sm font-bold tracking-widest uppercase">{section.category}</span>
-                <div className="flex-1 h-px bg-gray-200" />
-              </div>
-
-              <div className="space-y-6">
-                {section.items.map((item, index) => (
-                  <div key={index} className="bg-white rounded-2xl p-8 border border-gray-200 hover:border-loadlink-orange/20 transition-colors duration-300 hover:shadow-md">
-                    <h2 className="text-xl font-bold text-loadlink-navy mb-4 flex items-start gap-3">
-                      <span className="w-6 h-6 rounded-full bg-loadlink-orange/10 text-loadlink-orange flex items-center justify-center flex-shrink-0 mt-0.5">
-                        <svg className="w-3 h-3" fill="currentColor" viewBox="0 0 20 20">
-                          <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
-                        </svg>
-                      </span>
-                      {item.question}
-                    </h2>
-                    <div className="text-gray-600 leading-relaxed space-y-3 pl-9">
-                      {item.answer}
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-          ))}
-        </div>
+        <FaqAccordion sections={sections} />
       </section>
 
       {/* CTA */}

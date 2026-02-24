@@ -17,7 +17,7 @@ export default function ConnectEcommerce() {
   const ref = useReveal();
 
   return (
-    <section className="py-24 md:py-32 px-[5%] md:px-[8%] bg-gray-50" ref={ref}>
+    <section id="connect-ecommerce" className="py-24 md:py-32 px-[5%] md:px-[8%] bg-gray-50" ref={ref}>
       <div className="max-w-6xl mx-auto">
         <div className="text-center mb-16 reveal">
           <span className="text-loadlink-orange text-sm font-semibold tracking-widest uppercase mb-3 block">
