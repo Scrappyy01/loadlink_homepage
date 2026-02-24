@@ -80,14 +80,15 @@ const sections = [
       {
         question: 'How Does LoadLink Work?',
         answer: (
-          <p>LoadLink is a shipping and fulfilment software platform that connects your preferred carriers with your existing commerce systems. It automates carrier allocation, label generation, bookings, and tracking across multiple carriers. With LoadLink Fleet, our fleet management solution, you can also connect and optimise your own fleet.</p>
+          <p>LoadLink is a shipping and fulfilment software platform that connects your preferred carriers and with our easy to install live rate plugin&apos;s, it will integrate with your existing commerce systems. It automates carrier allocation, label generation, multiple bookings with one click of a button, and tracking across multiple carriers.</p>
         ),
       },
       {
         question: 'How Much Does LoadLink Cost?',
         answer: (
           <>
-            <p>We offer various plans to fit your business size, volume, and delivery goals.</p>
+            <p>With LoadLink Parcel Freight, you only pay for what you ship.</p>
+            <p>LoadLink Connect has various plans for carriers depending on each company&apos;s requirements.</p>
             <Link
               href="#"
               className="inline-flex items-center gap-2 mt-4 bg-loadlink-orange text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-loadlink-navy transition-colors duration-300"
@@ -104,7 +105,7 @@ const sections = [
         question: 'Can I Partner With LoadLink?',
         answer: (
           <>
-            <p>We believe that exceptional shipping experiences come from deep integrations and collaboration. We warmly welcome partners to join our growing ecosystem.</p>
+            <p>Yes, we believe that exceptional shipping experiences come from great service, deep integrations and dynamic collaborations. We encourage businesses to partner with us and join our growing ecosystem.</p>
             <Link
               href="/contact"
               className="inline-flex items-center gap-2 mt-4 bg-loadlink-orange text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-loadlink-navy transition-colors duration-300"
@@ -160,15 +161,19 @@ const sections = [
             <ul className="mt-3 space-y-2 list-none">
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
-                Access to custom pricing and shipping rates
+                Improved cash flow
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
-                Priority support from our team
+                Streamlines administration
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
-                Flexible shipping options tailored to your business
+                Strengthened supplier relationships
+              </li>
+              <li className="flex items-center gap-2">
+                <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
+                Enhancing operational efficiency
               </li>
               <li className="flex items-center gap-2">
                 <span className="w-1.5 h-1.5 rounded-full bg-loadlink-orange flex-shrink-0" />
