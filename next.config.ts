@@ -1,8 +1,14 @@
 import type { NextConfig } from "next";
+import { redirects } from "./lib/redirects";
 
 const nextConfig: NextConfig = {
   // Enforce trailing slashes for consistent canonical URLs
   trailingSlash: false,
+
+  // Redirects
+  async redirects() {
+    return redirects;
+  },
 
   // Security & performance headers
   async headers() {

@@ -290,7 +290,7 @@ export default function PrivacyPolicyPage() {
               Contact Us
             </Link>
             <Link
-              href="/faq"
+              href="/faqs"
               className="bg-gray-100 text-loadlink-navy px-8 py-3.5 rounded-full font-semibold hover:bg-gray-200 transition-colors duration-300"
             >
               Read Our FAQ

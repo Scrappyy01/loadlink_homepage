@@ -7,7 +7,7 @@ import { useReveal } from '../hooks/useReveal';
 const footerLinks = {
   About: [
     { label: 'About Us', href: '/about-us' },
-    { label: 'FAQ', href: '/faq' },
+    { label: 'FAQ', href: '/faqs' },
     { label: 'Partners', href: '/partners' },
     { label: 'Contact Us', href: '/contact' },
     { label: 'Advantages', href: '/advantages' },

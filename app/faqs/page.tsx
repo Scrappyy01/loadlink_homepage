@@ -8,13 +8,13 @@ export const metadata: Metadata = {
   description:
     "Find answers to common questions about LoadLink — Australia's freight and logistics marketplace. Learn about shipping, pricing, cargo types, and support.",
   alternates: {
-    canonical: '/faq',
+    canonical: '/faqs',
   },
   openGraph: {
     title: 'FAQ | LoadLink Australia',
     description:
       'Find answers to common questions about LoadLink — shipping, pricing, cargo types, and support.',
-    url: 'https://www.loadlink.com.au/faq',
+    url: 'https://www.loadlink.com.au/faqs',
   },
 };
 

@@ -29,7 +29,7 @@ const navItems = [
     href: '#',
     children: [
       { label: 'About Us', href: '/about-us', description: 'Learn about LoadLink' },
-      { label: 'FAQ', href: '/faq', description: 'Frequently asked questions' },
+      { label: 'FAQ', href: '/faqs', description: 'Frequently asked questions' },
       { label: 'Partners', href: '/partners', description: 'Our delivery partners' },
       { label: 'Our Advantages', href: '/advantages', description: 'Why businesses choose LoadLink' },
     ],
