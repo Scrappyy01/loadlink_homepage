@@ -1,7 +1,6 @@
 'use client';
 
 import { FormEvent, useState } from 'react';
-import { useEffect } from 'react';
 import Footer from '../components/Footer';
 
 interface FormData {
@@ -19,6 +18,8 @@ export default function ContactPage() {
     message: '',
   });
   const [submitted, setSubmitted] = useState(false);
+  const [loading, setLoading] = useState(false);
+  const [error, setError] = useState<string | null>(null);
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -28,17 +29,32 @@ export default function ContactPage() {
     }));
   };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log('Form submitted:', formData);
-    setSubmitted(true);
-    
-    // Reset form after 3 seconds
-    setTimeout(() => {
-      setFormData({ name: '', email: '', subject: '', message: '' });
-      setSubmitted(false);
-    }, 3000);
+    setLoading(true);
+    setError(null);
+
+    try {
+      const res = await fetch('/api/contact', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok) {
+        setError(data.error || 'Something went wrong. Please try again.');
+      } else {
+        setSubmitted(true);
+        setFormData({ name: '', email: '', subject: '', message: '' });
+        setTimeout(() => setSubmitted(false), 5000);
+      }
+    } catch {
+      setError('Failed to send message. Please check your connection and try again.');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -72,12 +88,19 @@ export default function ContactPage() {
       <div className="min-h-screen bg-white py-20 px-4">
         <div className="max-w-2xl mx-auto">
 
-        {submitted ? (
+        {submitted && (
           <div className="bg-green-100 border border-green-400 text-green-700 px-8 py-6 rounded-lg text-center mb-8">
             <h2 className="font-bold text-lg mb-2">Thank you!</h2>
             <p>We've received your message and will get back to you soon.</p>
           </div>
-        ) : null}
+        )}
+
+        {error && (
+          <div className="bg-red-100 border border-red-400 text-red-700 px-8 py-6 rounded-lg text-center mb-8">
+            <h2 className="font-bold text-lg mb-2">Oops!</h2>
+            <p>{error}</p>
+          </div>
+        )}
 
         <form onSubmit={handleSubmit} className="bg-light-bg rounded-lg p-8 shadow-lg">
           {/* Name Field */}
@@ -151,9 +174,10 @@ export default function ContactPage() {
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full bg-loadlink-orange text-white font-bold py-3 px-6 rounded-lg hover:bg-loadlink-navy transition-all duration-300"
+            disabled={loading}
+            className="w-full bg-loadlink-orange cursor-pointer text-white font-bold py-3 px-6 rounded-lg hover:bg-loadlink-navy transition-all duration-300 disabled:opacity-60 disabled:cursor-not-allowed"
           >
-            Send Message
+            {loading ? 'Sending...' : 'Send Message'}
           </button>
         </form>
 

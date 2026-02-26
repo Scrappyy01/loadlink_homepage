@@ -9,7 +9,7 @@ const services = [
     icon: "fa-solid fa-box",
     title: "Book a Parcel",
     description:
-      "Instant shipping rates from top carriers. Compare, book, and track — all in one place.",
+      "Instant shipping rates from top carriers. Compare, book, and track all in one place.",
     cta: "Start Shipping",
     href: "https://parcelfreight.loadlink.com.au/parcel-freight",
     image: "/images/guy-box.webp",
@@ -26,7 +26,7 @@ const services = [
     icon: "fa-solid fa-truck-moving",
     title: "LoadLink Connect",
     description:
-      "List your freight and get competitive quotes from verified carriers across Australia.",
+      "List your heavy items, machinery, containers etc. and get competitive quotes from verified carriers all across Australia.",
     cta: "Get Free Quote",
     href: "https://portal.loadlink.com.au/register/",
     image: "/images/Truck-2.jpg",

@@ -18,6 +18,7 @@ const heroServices = [
   {
     icon: "fa-solid fa-truck-moving",
     title: "LoadLink Connect",
+    subtitle: "For all of your heavy items, machinery, containers etc",
     cta: "Get Free Quote",
     href: "https://portal.loadlink.com.au/register/",
     image: "/images/Truck-2.jpg",
@@ -55,8 +56,14 @@ export default function Hero() {
         playsInline
         className="absolute inset-0 w-full h-full object-cover scale-105"
       >
-        <source src="/images/Videos/Loadlink Homepage Hero Video.mp4" type="video/mp4" />
-        <track kind="descriptions" label="Visual description of LoadLink hero video" />
+        <source
+          src="/images/Videos/Loadlink Homepage Hero Video.mp4"
+          type="video/mp4"
+        />
+        <track
+          kind="descriptions"
+          label="Visual description of LoadLink hero video"
+        />
       </video>
 
       {/* Gradient Overlay */}
@@ -193,6 +200,11 @@ export default function Hero() {
                         />
                       </svg>
                     </span>
+                    {"subtitle" in service && service.subtitle && (
+                      <p className="text-white font-semibold text-sm mt-3 leading-snug">
+                        {service.subtitle}
+                      </p>
+                    )}
                   </div>
                 </Link>
               ))}
@@ -244,6 +256,11 @@ export default function Hero() {
                       />
                     </svg>
                   </span>
+                  {"subtitle" in service && service.subtitle && (
+                    <p className="text-white font-semibold text-sm mt-2 leading-snug px-1">
+                      {service.subtitle}
+                    </p>
+                  )}
                 </div>
               </Link>
             ))}
