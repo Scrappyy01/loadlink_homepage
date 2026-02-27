@@ -88,18 +88,119 @@ export default function WooCommerceIntegration() {
             </div>
           </div>
 
+          {/* Introduction Section */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-4">Introduction</h2>
+            <p className="text-gray-700 text-lg leading-relaxed mb-4">
+              The Loadlink Shopify Application is a professional integration middleware designed to bridge Shopify storefronts with the Loadlink freight platform. The application facilitates <strong>real-time logistics management</strong>, providing automated freight rate calculations during checkout and streamlined order fulfillment workflows directly within the Shopify Admin.
+            </p>
+          </div>
+
+          {/* System Requirements */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">System Requirements & Prerequisites</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-loadlink-orange">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Technical Requirements</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3">
+                    <span className="text-loadlink-orange font-bold">•</span>
+                    <div><strong className="text-gray-800">Node.js:</strong> <span className="text-gray-700">Version 18.0.0 or higher</span></div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-loadlink-orange font-bold">•</span>
+                    <div><strong className="text-gray-800">Shopify CLI:</strong> <span className="text-gray-700">For app management</span></div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-loadlink-orange font-bold">•</span>
+                    <div><strong className="text-gray-800">Git:</strong> <span className="text-gray-700">For repository cloning</span></div>
+                  </li>
+                </ul>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-l-4 border-blue-500">
+                <h3 className="text-xl font-semibold text-gray-800 mb-4">Account & Credentials</h3>
+                <ul className="space-y-2">
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-500 font-bold">•</span>
+                    <div><strong className="text-gray-800">Shopify Partner Account:</strong> <span className="text-gray-700">For app distribution and API access</span></div>
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <span className="text-blue-500 font-bold">•</span>
+                    <div><strong className="text-gray-800">Loadlink Credentials:</strong> <span className="text-gray-700">API Key, Secret, and User ID</span></div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          {/* Functional Architecture Overview */}
+          <div className="mb-12">
+            <h2 className="text-3xl font-bold text-gray-800 mb-6">How It Works</h2>
+            
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-loadlink-orange">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold text-lg">1</span>
+                  <h3 className="text-lg font-semibold text-gray-800">Rate Calculation</h3>
+                </div>
+                <p className="text-gray-700 text-sm">During checkout, real-time freight rates are calculated based on cart weight, dimensions, and delivery location using the Loadlink API.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-blue-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-blue-500 text-white font-bold text-lg">2</span>
+                  <h3 className="text-lg font-semibold text-gray-800">Order Automation</h3>
+                </div>
+                <p className="text-gray-700 text-sm">When an order is paid, webhooks automatically trigger freight booking in Loadlink and store the Freight ID in Shopify metafields.</p>
+              </div>
+
+              <div className="bg-white p-6 rounded-xl shadow-md border-t-4 border-green-500">
+                <div className="flex items-center gap-3 mb-3">
+                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-green-500 text-white font-bold text-lg">3</span>
+                  <h3 className="text-lg font-semibold text-gray-800">Admin Control</h3>
+                </div>
+                <p className="text-gray-700 text-sm">Centralized dashboard in Shopify Admin for managing API credentials, defaults, and system logging preferences.</p>
+              </div>
+            </div>
+
+            <div className="bg-gradient-to-r from-gray-50 to-gray-100 rounded-xl p-8 border border-gray-200">
+              <h3 className="text-lg font-semibold text-gray-800 mb-4 flex items-center gap-2">
+                <svg className="w-5 h-5 text-loadlink-orange" fill="currentColor" viewBox="0 0 20 20">
+                  <path fillRule="evenodd" d="M12.316 3.051a1 1 0 01.633 1.265l-4 12a1 1 0 11-1.898-.632l4-12a1 1 0 011.265-.633zM5.707 6.293a1 1 0 010 1.414L3.414 10l2.293 2.293a1 1 0 11-1.414 1.414l-3-3a1 1 0 010-1.414l3-3a1 1 0 011.414 0zm8.586 0a1 1 0 011.414 0l3 3a1 1 0 010 1.414l-3 3a1 1 0 11-1.414-1.414L16.586 10l-2.293-2.293a1 1 0 010-1.414z" clipRule="evenodd"/>
+                </svg>
+                Data Flow
+              </h3>
+              <div className="text-center font-mono text-sm text-gray-700 space-y-2">
+                <p>Customer adds product to cart</p>
+                <p className="text-loadlink-orange font-semibold">⬇</p>
+                <p>Shopify requests shipping rates from app</p>
+                <p className="text-loadlink-orange font-semibold">⬇</p>
+                <p>App queries Loadlink API</p>
+                <p className="text-loadlink-orange font-semibold">⬇</p>
+                <p>Real-time rates displayed at checkout</p>
+                <p className="text-loadlink-orange font-semibold">⬇</p>
+                <p>Order paid → Webhook triggers freight booking</p>
+                <p className="text-loadlink-orange font-semibold">⬇</p>
+                <p>Freight confirmed in Loadlink & Shopify</p>
+              </div>
+            </div>
+          </div>
+
           {/* Manual Sections */}
-          <div className="space-y-4">
+          <div className="space-y-4 mt-12">
             
             {/* Section 1 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
+                type="button"
                 onClick={() => toggleSection('accessing')}
                 className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">1</span>
-                  <h2 className="text-2xl font-bold text-gray-800">Accessing the Plugin</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">Create a Shopify Store (Testing Environment)</h2>
                 </div>
                 <svg 
                   className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'accessing' ? 'rotate-180' : ''}`} 
@@ -113,49 +214,47 @@ export default function WooCommerceIntegration() {
               
               {openSection === 'accessing' && (
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    Upon activation, the <strong>Loadlink Parcel Freight</strong> menu will appear in your WordPress admin sidebar. 
-                    This central hub contains all tools necessary to manage your shipping integration.
-                  </p>
-                  
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Navigation Overview:</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">Dashboard:</strong>
-                        <span className="text-gray-700"> High-level system health and quick action buttons.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">My Parcel Freight:</strong>
-                        <span className="text-gray-700"> Log of all processed freight bookings and manifests.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">Settings:</strong>
-                        <span className="text-gray-700"> Management of API credentials and default shipping behaviors.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">Instructions:</strong>
-                        <span className="text-gray-700"> A step-by-step checklist for initial setup.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">About & Notices:</strong>
-                        <span className="text-gray-700"> Version details and system-generated alerts.</span>
-                      </div>
-                    </li>
-                  </ul>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-loadlink-orange">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 1: Create a Shopify Partner Account</h3>
+                    <p className="text-gray-700 mb-3">Go to the <strong>Shopify Partner portal</strong> and create a free account. You need this because:</p>
+                    <ul className="space-y-2 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Carrier Service integrations require an app</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Apps are created inside the Partner dashboard</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">You can create unlimited dev stores</span></li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-blue-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 2: Create a Development Store</h3>
+                    <p className="text-gray-700 mb-2">Inside the Partner dashboard:</p>
+                    <ol className="space-y-1 ml-4 list-decimal list-inside text-gray-700 mb-3">
+                      <li>Click <strong>Stores</strong></li>
+                      <li>Click <strong>Add store</strong></li>
+                      <li>Choose <strong>Development store</strong></li>
+                      <li>Give it a name (e.g. <code className="bg-gray-100 px-1 rounded">loadlink-test-store</code>)</li>
+                      <li>Select latest Shopify version</li>
+                      <li>Create store</li>
+                    </ol>
+                    <p className="text-gray-700 mb-1">This gives you:</p>
+                    <ul className="space-y-1 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">A fully functional Shopify store</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Free for development</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Ability to test custom apps</span></li>
+                    </ul>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg border-l-4 border-yellow-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 3: Upgrade Plan (Important for Carrier Services)</h3>
+                    <p className="text-gray-700 mb-2">Shopify only allows Carrier Service apps on:</p>
+                    <ul className="space-y-1 ml-4 mb-3">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Advanced plan</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Shopify Plus</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Or stores with real-time carrier shipping enabled</span></li>
+                    </ul>
+                    <div className="bg-yellow-50 border border-yellow-200 rounded p-3">
+                      <p className="text-gray-700 text-sm"><strong>For dev stores:</strong> You can enable real-time carrier shipping manually in settings. If testing fails later, this is usually why.</p>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -163,81 +262,77 @@ export default function WooCommerceIntegration() {
             {/* Section 2 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
+                type="button"
                 onClick={() => toggleSection('dashboard')}
                 className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">2</span>
-                  <h2 className="text-2xl font-bold text-gray-800">The Dashboard</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">Set Up the Loadlink Shopify App</h2>
                 </div>
-                <svg 
-                  className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'dashboard' ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
+                <svg className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'dashboard' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {openSection === 'dashboard' && (
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    The Dashboard serves as your command center for monitoring the connection between WooCommerce and the Loadlink API.
-                  </p>
-                  
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Key Sections:</h3>
-                  
-                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-green-500">
-                    <h4 className="font-bold text-gray-800 mb-2">App Status:</h4>
-                    <ul className="space-y-2 ml-4">
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-500 font-bold">✓</span>
-                        <div>
-                          <strong className="text-gray-800">API Configuration:</strong>
-                          <span className="text-gray-700"> A green "Active" badge confirms your store is successfully communicating with Loadlink.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-green-500 font-bold">✓</span>
-                        <div>
-                          <strong className="text-gray-800">Freight Orders:</strong>
-                          <span className="text-gray-700"> Tracks the total number of bookings processed through the plugin.</span>
-                        </div>
-                      </li>
+                  <div className="bg-blue-50 border border-blue-200 rounded-lg p-3 mb-4">
+                    <p className="text-blue-800 text-sm font-semibold">This is NOT a theme plugin. It's a Shopify App that runs externally.</p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-loadlink-orange">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 4: Install Required Tools</h3>
+                    <p className="text-gray-700 mb-2">You need:</p>
+                    <ul className="space-y-1 ml-4 mb-3">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Node.js 18+</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Git</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Shopify CLI</span></li>
                     </ul>
+                    <p className="text-gray-700 mb-2">Install Shopify CLI:</p>
+                    <pre className="bg-gray-900 text-green-400 p-3 rounded-lg text-sm overflow-x-auto">npm install -g @shopify/cli @shopify/app</pre>
                   </div>
 
                   <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-blue-500">
-                    <h4 className="font-bold text-gray-800 mb-2">Quick Actions:</h4>
-                    <ul className="space-y-2 ml-4">
-                      <li className="flex items-start gap-3">
-                        <span className="text-loadlink-orange font-bold">→</span>
-                        <div>
-                          <strong className="text-gray-800">Configure Settings (Orange):</strong>
-                          <span className="text-gray-700"> Edit API keys or shipping defaults.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-loadlink-orange font-bold">→</span>
-                        <div>
-                          <strong className="text-gray-800">Setup Carrier Service:</strong>
-                          <span className="text-gray-700"> Guidance on registering your carrier credentials.</span>
-                        </div>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-loadlink-orange font-bold">→</span>
-                        <div>
-                          <strong className="text-gray-800">View Orders:</strong>
-                          <span className="text-gray-700"> Jump directly to your freight history.</span>
-                        </div>
-                      </li>
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 5: Clone the App</h3>
+                    <pre className="bg-gray-900 text-green-400 p-3 rounded-lg text-sm overflow-x-auto">{`git clone <repository-url>\ncd loadlink-app\nnpm install`}</pre>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-green-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 6: Create Shopify App via CLI</h3>
+                    <p className="text-gray-700 mb-2">From inside the project folder:</p>
+                    <pre className="bg-gray-900 text-green-400 p-3 rounded-lg text-sm overflow-x-auto mb-3">shopify app dev</pre>
+                    <p className="text-gray-700 mb-2">This does several things automatically:</p>
+                    <ul className="space-y-1 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Prompts you to log in</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Creates the app in your Partner dashboard</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Generates API keys</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Creates a tunnel URL</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Installs the app into your dev store</span></li>
                     </ul>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg border-l-4 border-purple-500">
-                    <h4 className="font-bold text-gray-800 mb-2">Getting Started Guide:</h4>
-                    <p className="text-gray-700">Follow the 3-step walk-through (Connect, Register, and Launch) to ensure no configuration steps are missed.</p>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-purple-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 7: Setup Database</h3>
+                    <pre className="bg-gray-900 text-green-400 p-3 rounded-lg text-sm overflow-x-auto mb-3">npm run setup</pre>
+                    <p className="text-gray-700 mb-2">What this does:</p>
+                    <ul className="space-y-1 ml-4 mb-3">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Runs Prisma migrations</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Generates the Prisma client</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Sets up SQLite</span></li>
+                    </ul>
+                    <p className="text-gray-700 mb-1">If schema changes:</p>
+                    <pre className="bg-gray-900 text-green-400 p-3 rounded-lg text-sm overflow-x-auto">npx prisma migrate dev</pre>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg border-l-4 border-yellow-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 8: Run Development Server</h3>
+                    <pre className="bg-gray-900 text-green-400 p-3 rounded-lg text-sm overflow-x-auto mb-3">npm run dev</pre>
+                    <p className="text-gray-700 mb-2">This:</p>
+                    <ul className="space-y-1 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Starts the Node server</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Opens a secure tunnel</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Connects Shopify to your local machine</span></li>
+                    </ul>
                   </div>
                 </div>
               )}
@@ -246,104 +341,50 @@ export default function WooCommerceIntegration() {
             {/* Section 3 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
+                type="button"
                 onClick={() => toggleSection('settings')}
                 className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">3</span>
-                  <h2 className="text-2xl font-bold text-gray-800">Configuring Settings</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">Configure the App Inside Shopify</h2>
                 </div>
-                <svg 
-                  className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'settings' ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
+                <svg className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'settings' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {openSection === 'settings' && (
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    Navigate to <strong>Loadlink Parcel Freight &gt; Settings</strong> to initialize your integration.
-                  </p>
-                  
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">API Configuration</h3>
-                  <div className="overflow-x-auto mb-6">
-                    <table className="w-full bg-white rounded-lg overflow-hidden shadow">
-                      <thead className="bg-loadlink-orange text-white">
-                        <tr>
-                          <th className="px-4 py-3 text-left font-semibold">Field</th>
-                          <th className="px-4 py-3 text-left font-semibold">Description</th>
-                        </tr>
-                      </thead>
-                      <tbody className="divide-y divide-gray-200">
-                        <tr>
-                          <td className="px-4 py-3 font-medium text-gray-800">API URL</td>
-                          <td className="px-4 py-3 text-gray-700">The endpoint provided by Loadlink (standard default is pre-filled).</td>
-                        </tr>
-                        <tr>
-                          <td className="px-4 py-3 font-medium text-gray-800">API Key & Secret</td>
-                          <td className="px-4 py-3 text-gray-700">Your unique credentials provided by your Loadlink representative.</td>
-                        </tr>
-                        <tr>
-                          <td className="px-4 py-3 font-medium text-gray-800">User ID</td>
-                          <td className="px-4 py-3 text-gray-700">Your specific Loadlink Account User ID.</td>
-                        </tr>
-                      </tbody>
-                    </table>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-loadlink-orange">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 9: Install the App in Store</h3>
+                    <p className="text-gray-700 mb-2">If CLI didn't auto-install:</p>
+                    <ol className="space-y-1 ml-4 list-decimal list-inside text-gray-700">
+                      <li>Go to <strong>Shopify Admin</strong></li>
+                      <li>Apps → <strong>Develop Apps</strong></li>
+                      <li>Install Loadlink app</li>
+                      <li>Approve permissions</li>
+                    </ol>
                   </div>
 
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Store & Shipping Defaults</h3>
-                  <ul className="space-y-2 mb-6">
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">Building Type:</strong>
-                        <span className="text-gray-700"> Set the default for pickup/delivery (e.g., Residential or Commercial).</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">Store Phone:</strong>
-                        <span className="text-gray-700"> The primary contact number for the courier at the pickup point.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold">•</span>
-                      <div>
-                        <strong className="text-gray-800">Packaging Code:</strong>
-                        <span className="text-gray-700"> The default container type (e.g., RX for Box).</span>
-                      </div>
-                    </li>
-                  </ul>
-
-                  <h3 className="text-xl font-semibold text-gray-800 mb-3">Advanced Options (Troubleshooting)</h3>
-                  <ul className="space-y-2">
-                    <li className="flex items-start gap-3">
-                      <span className="text-blue-500 font-bold">⚙</span>
-                      <div>
-                        <strong className="text-gray-800">Enable Logging:</strong>
-                        <span className="text-gray-700"> Captures detailed transaction data (found in WooCommerce &gt; Status &gt; Logs).</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-blue-500 font-bold">⚙</span>
-                      <div>
-                        <strong className="text-gray-800">Mock API Mode:</strong>
-                        <span className="text-gray-700"> Allows for testing the checkout flow without incurring live API requests.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-blue-500 font-bold">⚙</span>
-                      <div>
-                        <strong className="text-gray-800">Disable Throttling:</strong>
-                        <span className="text-gray-700"> Removes the internal cache—useful only during heavy development testing.</span>
-                      </div>
-                    </li>
-                  </ul>
+                  <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 10: Enter Loadlink API Credentials</h3>
+                    <p className="text-gray-700 mb-3">Inside the app dashboard:</p>
+                    <div className="overflow-x-auto">
+                      <table className="w-full bg-white rounded-lg overflow-hidden shadow">
+                        <thead className="bg-loadlink-orange text-white">
+                          <tr>
+                            <th className="px-4 py-3 text-left font-semibold">Field</th>
+                            <th className="px-4 py-3 text-left font-semibold">Description</th>
+                          </tr>
+                        </thead>
+                        <tbody className="divide-y divide-gray-200">
+                          <tr><td className="px-4 py-3 font-medium text-gray-800">API Key</td><td className="px-4 py-3 text-gray-700">Your unique API key from Loadlink</td></tr>
+                          <tr><td className="px-4 py-3 font-medium text-gray-800">Secret</td><td className="px-4 py-3 text-gray-700">Your API secret provided by Loadlink</td></tr>
+                          <tr><td className="px-4 py-3 font-medium text-gray-800">User ID</td><td className="px-4 py-3 text-gray-700">Your Loadlink Account User ID</td></tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -351,58 +392,37 @@ export default function WooCommerceIntegration() {
             {/* Section 4 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
+                type="button"
                 onClick={() => toggleSection('setup')}
                 className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">4</span>
-                  <h2 className="text-2xl font-bold text-gray-800">Setup & Product Configuration</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">Enable Carrier Service</h2>
                 </div>
-                <svg 
-                  className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'setup' ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
+                <svg className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'setup' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {openSection === 'setup' && (
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    For the plugin to generate accurate live rates, your product data must be complete.
-                  </p>
-                  
-                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-yellow-500">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">4.1 Product Requirements</h3>
-                    <ol className="space-y-2 ml-4 list-decimal list-inside">
-                      <li className="text-gray-700">Navigate to <strong>Products &gt; All Products</strong>.</li>
-                      <li className="text-gray-700">In the <strong>Shipping tab</strong> for each product, you must enter:</li>
-                    </ol>
-                    <ul className="space-y-2 ml-8 mt-2">
-                      <li className="flex items-start gap-3">
-                        <span className="text-loadlink-orange font-bold">✓</span>
-                        <span className="text-gray-700"><strong>Weight (kg)</strong></span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-loadlink-orange font-bold">✓</span>
-                        <span className="text-gray-700"><strong>Dimensions (L / W / H in cm)</strong></span>
-                      </li>
-                      <li className="flex items-start gap-3">
-                        <span className="text-loadlink-orange font-bold">✓</span>
-                        <span className="text-gray-700"><strong>Packaging Type</strong> (selectable from the dropdown)</span>
-                      </li>
-                    </ul>
+                  <div className="bg-yellow-50 border border-yellow-300 rounded-lg p-3 mb-4">
+                    <p className="text-yellow-800 font-semibold text-sm">This step is critical.</p>
                   </div>
 
-                  <div className="bg-white p-4 rounded-lg border-l-4 border-green-500">
-                    <h3 className="text-xl font-semibold text-gray-800 mb-3">4.2 Enabling Rates at Checkout</h3>
-                    <ol className="space-y-2 ml-4 list-decimal list-inside">
-                      <li className="text-gray-700">Go to <strong>WooCommerce &gt; Settings &gt; Shipping</strong>.</li>
-                      <li className="text-gray-700">Select a <strong>Shipping Zone</strong> (e.g., Australia).</li>
-                      <li className="text-gray-700">Click <strong>Add Shipping Method</strong> and select <strong>Loadlink Live Rates</strong>.</li>
-                    </ol>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-green-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Enable in Shopify Admin</h3>
+                    <p className="text-gray-700 mb-2">Go to:</p>
+                    <p className="text-gray-700 font-medium mb-3">Shopify Admin → Settings → Shipping and Delivery</p>
+                    <p className="text-gray-700 mb-2">You should see <strong>Loadlink Carrier Service</strong>. Enable it for your shipping zone.</p>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg border-l-4 border-red-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">If You Don't See It</h3>
+                    <ul className="space-y-2 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-red-500 font-bold">•</span><span className="text-gray-700">Carrier Service may not be properly registered</span></li>
+                      <li className="flex items-start gap-3"><span className="text-red-500 font-bold">•</span><span className="text-gray-700">Plan may not support real-time carrier shipping</span></li>
+                    </ul>
                   </div>
                 </div>
               )}
@@ -411,59 +431,50 @@ export default function WooCommerceIntegration() {
             {/* Section 5 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
+                type="button"
                 onClick={() => toggleSection('freight')}
                 className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">5</span>
-                  <h2 className="text-2xl font-bold text-gray-800">Managing Freight Orders</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">Test Checkout Rate Calculation</h2>
                 </div>
-                <svg 
-                  className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'freight' ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
+                <svg className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'freight' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {openSection === 'freight' && (
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    Navigate to <strong>Loadlink Parcel Freight &gt; My Parcel Freight</strong> to view your booking history.
-                  </p>
-                  
-                  <ul className="space-y-3">
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold text-xl">📋</span>
-                      <div>
-                        <strong className="text-gray-800">The Freight List:</strong>
-                        <span className="text-gray-700"> View Freight IDs, customer names, and delivery summaries.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold text-xl">🔍</span>
-                      <div>
-                        <strong className="text-gray-800">Search:</strong>
-                        <span className="text-gray-700"> Quickly filter by Order Number or Customer Name.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold text-xl">👁</span>
-                      <div>
-                        <strong className="text-gray-800">View Details:</strong>
-                        <span className="text-gray-700"> Click the button on any row to open a manifest popup showing the specific Service ID and full address data used for the booking.</span>
-                      </div>
-                    </li>
-                    <li className="flex items-start gap-3">
-                      <span className="text-loadlink-orange font-bold text-xl">🧪</span>
-                      <div>
-                        <strong className="text-gray-800">Testing Tool:</strong>
-                        <span className="text-gray-700"> Use the "Create Test Freight Data" button to populate the list with dummy records during your initial store setup.</span>
-                      </div>
-                    </li>
-                  </ul>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-loadlink-orange">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 11: Create a Test Product</h3>
+                    <ul className="space-y-2 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Add product</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Add weight</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Make it physical</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Add inventory</span></li>
+                    </ul>
+                    <div className="bg-yellow-50 border border-yellow-200 rounded p-3 mt-3">
+                      <p className="text-sm text-gray-700"><strong>Note:</strong> Weight is important because freight quotes depend on it.</p>
+                    </div>
+                  </div>
+
+                  <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 12: Go Through Checkout</h3>
+                    <ol className="space-y-1 ml-4 list-decimal list-inside text-gray-700 mb-3">
+                      <li>Add product to cart</li>
+                      <li>Enter shipping address</li>
+                      <li>At shipping step, Shopify sends a request to <code className="bg-gray-100 px-1 rounded">/api/rates</code></li>
+                    </ol>
+                    <p className="text-gray-700 mb-2">Your server:</p>
+                    <ul className="space-y-1 ml-4 mb-3">
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Receives cart data</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Calls Loadlink API</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Returns shipping rates</span></li>
+                    </ul>
+                    <div className="bg-green-50 border border-green-200 rounded p-3">
+                      <p className="text-sm text-green-800">If working correctly, you will see <strong>Loadlink freight options</strong> at checkout.</p>
+                    </div>
+                  </div>
                 </div>
               )}
             </div>
@@ -471,85 +482,60 @@ export default function WooCommerceIntegration() {
             {/* Section 6 */}
             <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
               <button
+                type="button"
                 onClick={() => toggleSection('individual')}
                 className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
               >
                 <div className="flex items-center gap-4">
                   <span className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange text-white font-bold">6</span>
-                  <h2 className="text-2xl font-bold text-gray-800">Managing Individual Orders</h2>
+                  <h2 className="text-2xl font-bold text-gray-800">Test Order Automation</h2>
                 </div>
-                <svg 
-                  className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'individual' ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
+                <svg className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'individual' ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                 </svg>
               </button>
-              
               {openSection === 'individual' && (
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    You can access Loadlink data directly from any standard WooCommerce order:
-                  </p>
-                  
-                  <ol className="space-y-3 ml-4 list-decimal list-inside">
-                    <li className="text-gray-700">Navigate to <strong>WooCommerce &gt; Orders</strong>.</li>
-                    <li className="text-gray-700">Select a specific order.</li>
-                    <li className="text-gray-700">Locate the <strong>Order Actions</strong> box on the right.</li>
-                    <li className="text-gray-700">Select <strong>"View Freight Details"</strong> from the dropdown and click the Arrow/Update button.</li>
-                  </ol>
-                </div>
-              )}
-            </div>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-loadlink-orange">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 13: Enable Test Payments</h3>
+                    <ol className="space-y-1 ml-4 list-decimal list-inside text-gray-700">
+                      <li>Shopify Admin → Settings → Payments → <strong>Enable test mode</strong></li>
+                      <li>Complete a test checkout</li>
+                    </ol>
+                  </div>
 
-            {/* Section 7 */}
-            <div className="bg-white rounded-xl shadow-md overflow-hidden border border-gray-200">
-              <button
-                onClick={() => toggleSection('troubleshooting')}
-                className="w-full px-6 py-5 flex items-center justify-between hover:bg-gray-50 transition-colors cursor-pointer"
-              >
-                <div className="flex items-center gap-4">
-                  <span className="flex items-center justify-center w-10 h-10 rounded-full bg-red-500 text-white font-bold">7</span>
-                  <h2 className="text-2xl font-bold text-gray-800">Troubleshooting</h2>
-                </div>
-                <svg 
-                  className={`w-6 h-6 text-gray-600 transition-transform ${openSection === 'troubleshooting' ? 'rotate-180' : ''}`} 
-                  fill="none" 
-                  stroke="currentColor" 
-                  viewBox="0 0 24 24"
-                >
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                </svg>
-              </button>
-              
-              {openSection === 'troubleshooting' && (
-                <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
-                  <p className="text-gray-700 mb-4">
-                    If rates are not appearing at checkout or bookings are failing, check the following:
-                  </p>
-                  
-                  <div className="space-y-4">
-                    <div className="bg-white p-4 rounded-lg border-l-4 border-red-500">
-                      <h4 className="font-bold text-gray-800 mb-2">🔐 Credential Check:</h4>
-                      <p className="text-gray-700">Ensure no trailing spaces exist in your API Key or Secret fields.</p>
-                    </div>
+                  <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-blue-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 14: Webhook Trigger</h3>
+                    <p className="text-gray-700 mb-2">When order is paid, Shopify sends <code className="bg-gray-100 px-1 rounded">orders/paid</code>. Your app then:</p>
+                    <ul className="space-y-1 ml-4 mb-3">
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Calls Loadlink</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Creates shipment</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Stores Freight ID in metafields</span></li>
+                    </ul>
+                    <p className="text-gray-700 mb-2">You can verify:</p>
+                    <ul className="space-y-1 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Order page → Metafields</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Loadlink dashboard → Shipment created</span></li>
+                    </ul>
+                  </div>
 
-                    <div className="bg-white p-4 rounded-lg border-l-4 border-yellow-500">
-                      <h4 className="font-bold text-gray-800 mb-2">📦 Missing Metadata:</h4>
-                      <p className="text-gray-700">Verify that every item in the cart has an assigned Weight and Dimension. The API will return an error if these are zero or null.</p>
+                  <div className="bg-white p-4 rounded-lg border-l-4 border-purple-500">
+                    <h3 className="text-xl font-semibold text-gray-800 mb-3">How This Works Conceptually</h3>
+                    <div className="bg-gray-50 rounded-lg p-4 text-center font-mono text-sm text-gray-700 space-y-1">
+                      <p>Shopify Store</p>
+                      <p>⬇</p>
+                      <p>Calls Your Hosted App</p>
+                      <p>⬇</p>
+                      <p>Your App Talks to Loadlink</p>
+                      <p>⬇</p>
+                      <p>Returns data</p>
                     </div>
-
-                    <div className="bg-white p-4 rounded-lg border-l-4 border-orange-500">
-                      <h4 className="font-bold text-gray-800 mb-2">📍 Invalid Postcodes:</h4>
-                      <p className="text-gray-700">Ensure the customer's address is a valid Australian postcode recognized by Loadlink.</p>
-                    </div>
-
-                    <div className="bg-white p-4 rounded-lg border-l-4 border-blue-500">
-                      <h4 className="font-bold text-gray-800 mb-2">📝 Logs:</h4>
-                      <p className="text-gray-700">If errors persist, enable Logging in Settings and review the raw API response in the WooCommerce Status logs.</p>
-                    </div>
+                    <p className="text-gray-700 mt-3 mb-2 text-sm">Your app must be hosted somewhere in production. Common hosting options:</p>
+                    <ul className="space-y-1 ml-4">
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Vercel</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Render</span></li>
+                      <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">AWS</span></li>
+                    </ul>
                   </div>
                 </div>
               )}
@@ -563,7 +549,7 @@ export default function WooCommerceIntegration() {
             <p className="text-white/90 mb-6">Our support team is here to assist you with any questions or issues.</p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link 
-                href="mailto:support@loadlink.com.au" 
+                href="/contact" 
                 className="inline-flex items-center gap-2 bg-white text-loadlink-orange py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -573,7 +559,7 @@ export default function WooCommerceIntegration() {
                 Email Support
               </Link>
               <Link 
-                href="tel:+61123456789" 
+                href="/contact" 
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white py-3 px-6 rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
