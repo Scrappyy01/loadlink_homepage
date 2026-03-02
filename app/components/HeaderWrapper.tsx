@@ -5,5 +5,16 @@ import Header from "./Header";
 
 export default function HeaderWrapper() {
   const pathname = usePathname();
-  return <Header forceScrolled={pathname === "/get-started"} />;
+  const isGetStartedPage = pathname === "/get-started";
+
+  return (
+    <Header
+      forceScrolled={isGetStartedPage}
+      ctaHref={
+        isGetStartedPage
+          ? "https://parcelfreight.loadlink.com.au/parcel-freight"
+          : "/get-started"
+      }
+    />
+  );
 }

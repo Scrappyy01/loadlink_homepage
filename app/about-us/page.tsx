@@ -94,7 +94,7 @@ export default function OurGuaranteePage() {
                 Get Started Free
               </Link>
               <Link
-                href="/aboutus#general"
+                href="/faqs"
                 className="border border-white/20 text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white/10 transition-colors duration-300"
               >
                 Read Our FAQs
