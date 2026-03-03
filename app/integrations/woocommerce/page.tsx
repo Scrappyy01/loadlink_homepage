@@ -24,7 +24,7 @@ export default function WooCommerceIntegration() {
                 Loadlink for WooCommerce
               </h1>
               <p className="text-white/90 text-xl mb-2">User Manual & Integration Guide</p>
-              <p className="text-white/80 text-sm">Document Version: 1.0.0</p>
+              <p className="text-white/80 text-sm">Document Version: 1.4.0</p>
               <p className="text-white/80 text-sm mb-6">Target Audience: Store Administrators, Fulfillment Teams, and Shop Managers</p>
               
               <Link 
