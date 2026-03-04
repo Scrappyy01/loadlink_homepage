@@ -28,7 +28,8 @@ export default function WooCommerceIntegration() {
               <p className="text-white/80 text-sm mb-6">Target Audience: Store Administrators, Fulfillment Teams, and Shop Managers</p>
               
               <Link 
-                href="https://connect.loadlink.com.au" 
+                href="/downloads/loadlink-woocommerce.zip" 
+                download
                 className="inline-flex items-center gap-3 bg-white text-loadlink-orange py-4 px-8 rounded-lg font-semibold text-lg hover:bg-gray-100 transition-all duration-200 shadow-lg hover:shadow-xl"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-6 h-6" fill="currentColor" viewBox="0 0 512 512">
@@ -563,7 +564,7 @@ export default function WooCommerceIntegration() {
             <p className="text-white/90 mb-6">Our support team is here to assist you with any questions or issues.</p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Link 
-                href="mailto:support@loadlink.com.au" 
+                href="/contact" 
                 className="inline-flex items-center gap-2 bg-white text-loadlink-orange py-3 px-6 rounded-lg font-semibold hover:bg-gray-100 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -573,7 +574,7 @@ export default function WooCommerceIntegration() {
                 Email Support
               </Link>
               <Link 
-                href="tel:+61123456789" 
+                href="/contact" 
                 className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm text-white border-2 border-white py-3 px-6 rounded-lg font-semibold hover:bg-white/20 transition-colors"
               >
                 <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
