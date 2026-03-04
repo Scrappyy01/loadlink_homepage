@@ -1,13 +1,4 @@
 services:
-  nextjs_homepage_homepage:
-    container_name: nextjs_homepage_homepage
-    image: loadlinkdocker/loadlink-homepage:homepage
-    env_file:
-      - .env.homepage
-    restart: unless-stopped
-    networks:
-      - web
-
   nextjs_homepage_prod:
     container_name: nextjs_homepage_prod
     image: loadlinkdocker/loadlink-homepage:production
