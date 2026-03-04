@@ -22,7 +22,7 @@ const advantages = [
   {
     id: 'smarter-shipping',
     label: 'Smarter Shipping',
-    headline: 'Cut shipping costs by up to 47% with data-backed decisions',
+    headline: 'Cut shipping costs by up to 47%* with data-backed decisions',
     image: '/images/guy-box.webp',
     imageAlt: 'Person preparing parcels for shipment with LoadLink',
     color: 'border-loadlink-orange',
@@ -115,7 +115,7 @@ const advantages = [
 ];
 
 const stats = [
-  { value: '47%', label: 'Average shipping cost reduction' },
+  { value: '47%*', label: 'Average shipping cost reduction' },
   { value: '99.2%', label: 'On-time delivery rate' },
   { value: '3x', label: 'Faster fulfilment setup' },
   { value: 'Free', label: 'To list a shipment' },
