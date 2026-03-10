@@ -55,7 +55,7 @@ const promises = [
 const stats = [
   { value: '2022', label: 'Est. in Australia' },
   { value: '100%', label: 'Digital platform' },
-  { value: 'Free', label: 'To list a shipment' },
+
   { value: '24/7', label: 'Customer support' },
 ];
 
@@ -88,10 +88,12 @@ export default function OurGuaranteePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://portal.loadlink.com.au/register/"
+                href="https://parcelfreight.loadlink.com.au/parcel-freight"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-colors duration-300"
               >
-                Get Started Free
+                Get Started
               </Link>
               <Link
                 href="/faqs"
@@ -182,10 +184,12 @@ export default function OurGuaranteePage() {
               No matter the size — a small parcel, a pallet of stock, a car, or a road train — LoadLink has a delivery solution for you, with full transparency from quote to drop-off.
             </p>
             <Link
-              href="https://portal.loadlink.com.au/register/"
+              href="https://parcelfreight.loadlink.com.au/parcel-freight"
+              target="_blank"
+              rel="noopener noreferrer"
               className="inline-flex items-center gap-2 bg-loadlink-navy text-white px-8 py-3.5 rounded-full font-semibold hover:bg-loadlink-orange transition-colors duration-300"
             >
-              Start for Free
+              Start Now
               <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
               </svg>
@@ -320,10 +324,12 @@ export default function OurGuaranteePage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="https://portal.loadlink.com.au/register/"
+              href="https://parcelfreight.loadlink.com.au/parcel-freight"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-loadlink-navy transition-colors duration-300"
             >
-              Create Free Account
+              Create Account
             </Link>
             <Link
               href="/contact"

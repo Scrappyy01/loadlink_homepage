@@ -216,7 +216,7 @@ export default function WooCommerceIntegration() {
                 <div className="px-6 py-5 border-t border-gray-200 bg-gray-50">
                   <div className="bg-white p-4 rounded-lg mb-4 border-l-4 border-loadlink-orange">
                     <h3 className="text-xl font-semibold text-gray-800 mb-3">Step 1: Create a Shopify Partner Account</h3>
-                    <p className="text-gray-700 mb-3">Go to the <strong>Shopify Partner portal</strong> and create a free account. You need this because:</p>
+                    <p className="text-gray-700 mb-3">Go to the <strong>Shopify Partner portal</strong> and create an account. You need this because:</p>
                     <ul className="space-y-2 ml-4">
                       <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Carrier Service integrations require an app</span></li>
                       <li className="flex items-start gap-3"><span className="text-loadlink-orange font-bold">•</span><span className="text-gray-700">Apps are created inside the Partner dashboard</span></li>
@@ -238,7 +238,7 @@ export default function WooCommerceIntegration() {
                     <p className="text-gray-700 mb-1">This gives you:</p>
                     <ul className="space-y-1 ml-4">
                       <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">A fully functional Shopify store</span></li>
-                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Free for development</span></li>
+                      <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Available for development</span></li>
                       <li className="flex items-start gap-3"><span className="text-green-500 font-bold">✓</span><span className="text-gray-700">Ability to test custom apps</span></li>
                     </ul>
                   </div>

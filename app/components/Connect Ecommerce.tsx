@@ -27,7 +27,7 @@ export default function ConnectEcommerce() {
             Connect your store
           </h2>
           <p className="text-gray-500 text-lg max-w-xl mx-auto">
-            Free integrations with leading eCommerce platforms. Set up in minutes.
+            Integrations with leading eCommerce platforms. Set up in minutes.
           </p>
         </div>
 

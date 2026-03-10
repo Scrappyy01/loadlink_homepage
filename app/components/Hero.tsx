@@ -19,7 +19,7 @@ const heroServices = [
     icon: "fa-solid fa-truck-moving",
     title: "LoadLink Connect",
     subtitle: "For all of your heavy items, machinery, containers etc",
-    cta: "Get Free Quote",
+    cta: "Get Quote",
     href: "https://portal.loadlink.com.au/register/",
     image: "/images/Truck-2.jpg",
     bgColor: "bg-white/10",

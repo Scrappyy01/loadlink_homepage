@@ -267,11 +267,11 @@ const sections = [
     items: [
       {
         question: 'LoadLink Fees',
-        plainText: 'It is completely free for shippers to list a load with LoadLink! Our trusted Carriers are charged a monthly, quarterly or yearly subscription fee which you can find on our pricing page.',
+        plainText: 'Listing a load with LoadLink is available at no cost for shippers! Our trusted Carriers are charged a monthly, quarterly or yearly subscription fee which you can find on our pricing page.',
         alwaysOpen: true,
         answer: (
           <>
-            <p>It is completely <span className="font-semibold text-emerald-600">free</span> for shippers to list a load with LoadLink!</p>
+            <p>Listing a load with LoadLink is available at no cost for shippers!</p>
             <p>Our trusted Carriers are charged a monthly, quarterly or yearly subscription fee which you can find on our pricing page.</p>
             <Link
               href="#"
@@ -362,7 +362,9 @@ export default function AboutUsPage() {
           </p>
           <div className="flex flex-wrap gap-4 justify-center">
             <Link
-              href="https://portal.loadlink.com.au/register/"
+              href="https://parcelfreight.loadlink.com.au/parcel-freight"
+              target="_blank"
+              rel="noopener noreferrer"
               className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-loadlink-navy transition-colors duration-300"
             >
               Get Started Now
