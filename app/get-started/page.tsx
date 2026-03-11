@@ -4,9 +4,9 @@ import Image from "next/image";
 import Footer from "../components/Footer";
 
 export const metadata: Metadata = {
-  title: "Get Started Free | LoadLink",
+  title: "Get Started | LoadLink",
   description:
-    "Create your free LoadLink account and start shipping smarter today.",
+    "Create your LoadLink account and start shipping smarter today.",
 };
 
 export default function GetStartedPage() {
@@ -30,7 +30,7 @@ export default function GetStartedPage() {
                 rel="noopener noreferrer"
                 className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-loadlink-navy transition-colors duration-300"
               >
-                Create Free Account
+                Create Account
               </Link>
               <Link
                 href="/contact"
