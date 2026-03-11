@@ -8,7 +8,7 @@ const features = [
   {
     title: "Smarter Shipping",
     description:
-      "Lower costs by up to 47% and increase efficiency through smart, data-backed decisions and seamless multi-carrier integration.",
+      "Lower costs by up to 47%* and increase efficiency through smart, data-backed decisions and seamless multi-carrier integration.",
     image: "/images/SmartLogistics.png",
     href: "/advantages#smarter-shipping",
     span: "",

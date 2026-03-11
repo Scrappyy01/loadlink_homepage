@@ -47,7 +47,7 @@ export default function LoadlinkConnect() {
         <div className="relative rounded-3xl overflow-hidden min-h-[450px]">
           {/* Background image with parallax */}
           <div 
-            className="absolute inset-[-60px] will-change-transform rounded-3xl overflow-hidden"
+            className="absolute inset-0 will-change-transform rounded-3xl overflow-hidden"
             style={{ transform: `translateY(${offsetY}px)` }}
           >
             <Image 
@@ -78,7 +78,7 @@ export default function LoadlinkConnect() {
             
             <div className="flex flex-wrap gap-4">
               <Link 
-                href="https://app.loadlink.com.au/listings/" 
+                href="https://portal.loadlink.com.au/register/" 
                 className="inline-flex items-center gap-3 bg-loadlink-orange text-white py-3.5 px-8 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-all duration-300 group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 640 512">
@@ -87,7 +87,7 @@ export default function LoadlinkConnect() {
                 List freight
               </Link>
               <Link 
-                href="https://app.loadlink.com.au/search/" 
+                href="https://app.loadlink.com.au/listings/" 
                 className="inline-flex items-center gap-3 bg-white/10 backdrop-blur-sm text-white py-3.5 px-8 rounded-full font-semibold border border-white/20 hover:bg-white hover:text-loadlink-navy transition-all duration-300 group"
               >
                 <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="currentColor" viewBox="0 0 448 512">
