@@ -16,7 +16,7 @@ const navItems = [
       },
       {
         label: "LoadLink Connect",
-        href: "https://portal.loadlink.com.au/register/",
+        href: "https://parcelfreight.loadlink.com.au/",
         description: "Quote your freight and get it moving",
       },
       {
@@ -61,7 +61,11 @@ const navItems = [
         href: "/about-us",
         description: "Learn about LoadLink",
       },
-      { label: "FAQ", href: "/faqs", description: "Frequently asked questions" },
+      {
+        label: "FAQ",
+        href: "/faqs",
+        description: "Frequently asked questions",
+      },
       {
         label: "Partners",
         href: "/partners",
@@ -90,7 +94,8 @@ export default function Header({
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const scrolled = forceScrolled || scrolledState;
-  const isExternalCta = ctaHref.startsWith("http://") || ctaHref.startsWith("https://");
+  const isExternalCta =
+    ctaHref.startsWith("http://") || ctaHref.startsWith("https://");
 
   useEffect(() => {
     const handleScroll = () => setScrolledState(window.scrollY > 20);

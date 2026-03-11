@@ -20,7 +20,7 @@ const heroServices = [
     title: "LoadLink Connect",
     subtitle: "For all of your heavy items, machinery, containers etc",
     cta: "Get Quote",
-    href: "https://portal.loadlink.com.au/register/",
+    href: "https://parcelfreight.loadlink.com.au/",
     image: "/images/Truck-2.jpg",
     bgColor: "bg-white/10",
     borderColor: "border-white/30",
