@@ -88,10 +88,11 @@ export default function OurGuaranteePage() {
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://portal.loadlink.com.au/register/"
-                className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-colors duration-300"
+                href="https://parcelfreight.loadlink.com.au/parcel-freight"
+                target="_blank"
+                rel="noopener noreferrer"
               >
-                Get Started Free
+                Get Started
               </Link>
               <Link
                 href="/faqs"
@@ -334,7 +335,7 @@ export default function OurGuaranteePage() {
               href="https://portal.loadlink.com.au/register/"
               className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-loadlink-navy transition-colors duration-300"
             >
-              Create Free Account
+              Create Account
             </Link>
             <Link
               href="/contact"
