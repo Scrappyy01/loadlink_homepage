@@ -118,7 +118,7 @@ const stats = [
   { value: '47%*', label: 'Average shipping cost reduction' },
   { value: '99.2%', label: 'On-time delivery rate' },
   { value: '3x', label: 'Faster fulfilment setup' },
-  { value: 'Free', label: 'To list a shipment' },
+
 ];
 
 export default function AdvantagesPage() {
@@ -151,7 +151,7 @@ export default function AdvantagesPage() {
                 href="https://portal.loadlink.com.au/register/"
                 className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-colors duration-300"
               >
-                Get Started Free
+                Get Started
               </Link>
               <Link
                 href="/contact"
@@ -242,14 +242,16 @@ export default function AdvantagesPage() {
               Join thousands of businesses already shipping smarter with LoadLink
             </h2>
             <p className="text-gray-300 leading-relaxed mb-8">
-              It&apos;s free to list a shipment and get quotes. Create your account in minutes and see the difference competitive pricing, reliable delivery, and a modern platform can make for your business.
+              Create your account in minutes and see the difference competitive pricing, reliable delivery, and a modern platform can make for your business.
             </p>
             <div className="flex flex-wrap gap-4">
               <Link
-                href="https://portal.loadlink.com.au/register/"
+                href="https://parcelfreight.loadlink.com.au/parcel-freight"
+                target="_blank"
+                rel="noopener noreferrer"
                 className="bg-loadlink-orange text-white px-8 py-3.5 rounded-full font-semibold hover:bg-white hover:text-loadlink-navy transition-colors duration-300"
               >
-                Create Free Account
+                Create Account
               </Link>
               <Link
                 href="/partners"

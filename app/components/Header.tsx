@@ -16,8 +16,8 @@ const navItems = [
       },
       {
         label: "LoadLink Connect",
-        href: "https://portal.loadlink.com.au/register/",
-        description: "Quote your freight for free and get it moving",
+        href: "https://parcelfreight.loadlink.com.au/",
+        description: "Quote your freight and get it moving",
       },
       {
         label: "Carriers Loadboard",
@@ -61,7 +61,11 @@ const navItems = [
         href: "/about-us",
         description: "Learn about LoadLink",
       },
-      { label: "FAQ", href: "/faqs", description: "Frequently asked questions" },
+      {
+        label: "FAQ",
+        href: "/faqs",
+        description: "Frequently asked questions",
+      },
       {
         label: "Partners",
         href: "/partners",
@@ -90,7 +94,8 @@ export default function Header({
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
   const scrolled = forceScrolled || scrolledState;
-  const isExternalCta = ctaHref.startsWith("http://") || ctaHref.startsWith("https://");
+  const isExternalCta =
+    ctaHref.startsWith("http://") || ctaHref.startsWith("https://");
 
   useEffect(() => {
     const handleScroll = () => setScrolledState(window.scrollY > 20);
@@ -217,7 +222,7 @@ export default function Header({
               rel={isExternalCta ? "noopener noreferrer" : undefined}
               className="ml-4 bg-loadlink-orange text-white px-6 py-2.5 rounded-full text-sm font-semibold hover:bg-loadlink-orange/90 hover:shadow-lg hover:shadow-loadlink-orange/25 transition-all duration-300 hover:-translate-y-0.5"
             >
-              Get Started Free
+              Get Started
             </Link>
           </nav>
 
@@ -336,7 +341,7 @@ export default function Header({
             className="mt-6 bg-loadlink-orange text-white px-6 py-4 rounded-xl font-semibold hover:bg-loadlink-orange/90 transition-all text-center text-lg"
             onClick={() => setMobileMenuOpen(false)}
           >
-            Get Started Free
+            Get Started
           </Link>
         </nav>
       </div>
