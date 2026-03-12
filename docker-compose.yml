@@ -8,15 +8,6 @@ services:
     networks:
       - web
 
-  nextjs_homepage_prod:
-    container_name: nextjs_homepage_prod
-    image: loadlinkdocker/loadlink-homepage:production
-    env_file:
-      - .env.production
-    restart: unless-stopped
-    networks:
-      - web
-
 networks:
   web:
     external: true
