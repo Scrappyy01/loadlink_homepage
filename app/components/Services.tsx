@@ -27,8 +27,8 @@ const services = [
     title: "LoadLink Connect",
     description:
       "List your heavy items, machinery, containers etc. and get competitive quotes from verified carriers all across Australia.",
-    cta: "Get Free Quote",
-    href: "https://portal.loadlink.com.au/register/",
+    cta: "Get Quote",
+    href: "https://parcelfreight.loadlink.com.au/",
     image: "/images/Truck-2.jpg",
     bgColor: "bg-blue-50/70",
     borderColor: "border-blue-200",

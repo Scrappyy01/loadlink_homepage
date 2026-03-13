@@ -19,8 +19,8 @@ const heroServices = [
     icon: "fa-solid fa-truck-moving",
     title: "LoadLink Connect",
     subtitle: "For all of your heavy items, machinery, containers etc",
-    cta: "Get Free Quote",
-    href: "https://portal.loadlink.com.au/register/",
+    cta: "Get Quote",
+    href: "https://parcelfreight.loadlink.com.au/",
     image: "/images/Truck-2.jpg",
     bgColor: "bg-white/10",
     borderColor: "border-white/30",
@@ -117,7 +117,7 @@ export default function Hero() {
                 </svg>
               </Link>
               <Link
-                href="https://youtu.be/9JwxfYZ_8-w?si=vJxQfEYG1onW1oWE"
+                href="https://youtu.be/FFvKhzefg54"
                 className="group bg-white/10 backdrop-blur-md border border-white/30 text-white py-4 px-8 rounded-full font-semibold text-lg hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 inline-flex items-center gap-3"
               >
                 <svg
