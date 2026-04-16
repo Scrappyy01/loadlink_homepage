@@ -248,11 +248,11 @@ export default function Header({
                   scrolled ? "border-gray-200/60" : "border-white/10"
                 }`}
               >
-                  <span
-                    className={`text-base font-bold uppercase tracking-widest transition-colors duration-300 ${
-                      scrolled ? "text-loadlink-orange" : "text-white"
-                    }`}
-                  >
+                <span
+                  className={`text-base font-bold uppercase tracking-widest transition-colors duration-300 ${
+                    scrolled ? "text-loadlink-orange" : "text-white"
+                  }`}
+                >
                   Track your shipment
                 </span>
                 <div

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import localFont from "next/font/local";
 import HeaderWrapper from "./components/HeaderWrapper";
+import ChatBot from "./components/ChatBot";
 import "./globals.css";
 
 const inter = localFont({
@@ -85,9 +86,11 @@ export const metadata: Metadata = {
     icon: "/favicon-loadlink-270x270.png",
   },
   verification: {
-    google: ['3f2efd9760c8998c', '708439bbea9ad119'],
+    google: ["3f2efd9760c8998c", "708439bbea9ad119"],
     other: {
-      'ahrefs-site-verification': ['eaed1f08b20f68aa44a6594d1bd83e89b1be5b24d0967e959b77c027ad129ef3'],
+      "ahrefs-site-verification": [
+        "eaed1f08b20f68aa44a6594d1bd83e89b1be5b24d0967e959b77c027ad129ef3",
+      ],
     },
   },
 };
@@ -135,6 +138,7 @@ export default function RootLayout({
         />
         <HeaderWrapper />
         {children}
+        <ChatBot />
       </body>
     </html>
   );
