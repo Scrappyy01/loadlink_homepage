@@ -277,7 +277,7 @@ export default function Header({
                   />
                   <button
                     onClick={handleTrack}
-                    className="bg-loadlink-orange text-white px-7 py-2 rounded-full text-sm font-semibold hover:bg-loadlink-orange/90 hover:shadow-md hover:shadow-loadlink-orange/30 transition-all duration-300 shrink-0"
+                    className="bg-loadlink-orange text-white px-7 py-2 rounded-full text-sm font-semibold hover:bg-loadlink-orange/90 hover:shadow-md hover:shadow-loadlink-orange/30 transition-all duration-300 shrink-0 cursor-pointer"
                   >
                     Track
                   </button>
