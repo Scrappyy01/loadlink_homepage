@@ -91,7 +91,7 @@ export default function Services() {
               href={service.href}
               className={`group relative block rounded-2xl border-2 ${service.borderColor} ${service.hoverBorder} ${service.bgColor} hover:shadow-lg transition-all duration-500 overflow-hidden`}
             >
-              <div className="relative z-10 flex items-center gap-6 md:gap-10 p-6 md:p-6">
+              <div className="relative z-10 flex items-center gap-4 md:gap-10 p-6 md:p-6">
                 {/* Image with fade */}
                 <div className="relative w-24 h-24 md:w-28 md:h-28 flex-shrink-0 rounded-xl overflow-hidden bg-white shadow-sm">
                   <Image
@@ -106,7 +106,7 @@ export default function Services() {
 
                 {/* Icon */}
                 <div
-                  className={`w-12 h-12 rounded-xl ${service.iconBg} flex items-center justify-center transition-colors duration-500 flex-shrink-0 shadow-sm`}
+                  className={`w-12 h-12 rounded-xl ${service.iconBg} hidden sm:flex items-center justify-center transition-colors duration-500 flex-shrink-0 shadow-sm`}
                 >
                   <i
                     className={`${service.icon} text-xl ${service.iconColor} transition-colors duration-500`}

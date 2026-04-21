@@ -196,6 +196,8 @@ export default function AdvantagesPage() {
                   src={adv.image}
                   alt={adv.imageAlt}
                   fill
+                  sizes="(max-width: 1024px) 100vw, 50vw"
+                  priority={i === 0}
                   className="object-cover"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-loadlink-navy/30 to-transparent" />

@@ -107,7 +107,7 @@ export default function Header({
     }
   };
   const dropdownTimeout = useRef<ReturnType<typeof setTimeout> | null>(null);
-  const scrolled = forceScrolled || scrolledState;
+  const scrolled = forceScrolled || scrolledState || mobileMenuOpen;
   const isExternalCta =
     ctaHref.startsWith("http://") || ctaHref.startsWith("https://");
 
