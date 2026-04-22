@@ -1,7 +1,7 @@
 ﻿"use client";
 
 import { useSearchParams, useRouter } from "next/navigation";
-import { useEffect, useState, Suspense } from "react";
+import { useEffect, useState, useRef, Suspense } from "react";
 import Footer from "../components/Footer";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
@@ -83,6 +83,89 @@ function stepDone(level: number, stepIdx: number) {
 function stepCurrent(level: number, stepIdx: number) {
   const thresholds = [1, 2, 3, 5];
   return level === thresholds[stepIdx];
+}
+
+// ─── Route Map ─────────────────────────────────────────────────────────────────
+
+interface RouteMapProps {
+  origin: string;
+  destination: string;
+}
+
+function RouteMap({ origin, destination }: RouteMapProps) {
+  const mapRef = useRef<HTMLDivElement>(null);
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  // Load the Google Maps script once
+  useEffect(() => {
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    if ((window as any).google?.maps) {
+      setIsLoaded(true);
+      return;
+    }
+    const scriptId = "google-maps-script";
+    if (document.getElementById(scriptId)) {
+      document.getElementById(scriptId)!.addEventListener("load", () => setIsLoaded(true));
+      return;
+    }
+    const apiKey = process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY;
+    if (!apiKey) return;
+    const script = document.createElement("script");
+    script.id = scriptId;
+    script.src = `https://maps.googleapis.com/maps/api/js?key=${apiKey}&libraries=places`;
+    script.async = true;
+    script.defer = true;
+    script.onload = () => setIsLoaded(true);
+    document.head.appendChild(script);
+  }, []);
+
+  // Render map once script is ready
+  useEffect(() => {
+    if (!isLoaded || !mapRef.current) return;
+
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    const g = (window as any).google.maps;
+
+    const map = new g.Map(mapRef.current, {
+      zoom: 6,
+      center: { lat: -25.2744, lng: 133.7751 },
+      mapTypeControl: false,
+    });
+
+    const directionsService = new g.DirectionsService();
+    const directionsRenderer = new g.DirectionsRenderer({
+      suppressMarkers: false,
+      preserveViewport: false,
+    });
+
+    directionsRenderer.setMap(map);
+
+    directionsService.route(
+      {
+        origin,
+        destination,
+        travelMode: g.TravelMode.DRIVING,
+        provideRouteAlternatives: true,
+      },
+      (result: unknown, status: string) => {
+        if (status === "OK" && result) {
+          directionsRenderer.setDirections(result);
+        }
+      },
+    );
+  }, [isLoaded, origin, destination]);
+
+  if (!isLoaded) {
+    return <div className="rounded-xl bg-gray-100 animate-pulse" style={{ height: "420px" }} />;
+  }
+
+  return (
+    <div
+      ref={mapRef}
+      className="rounded-xl overflow-hidden border border-gray-200"
+      style={{ height: "420px" }}
+    />
+  );
 }
 
 // ─── Stepper ──────────────────────────────────────────────────────────────────
@@ -245,10 +328,7 @@ function TrackingContent() {
     .filter(Boolean)
     .join(", ");
 
-  const mapSrc =
-    pickupLabel && dropoffLabel
-      ? `https://www.google.com/maps/embed/v1/directions?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_KEY}&origin=${encodeURIComponent(pickupLabel + ", Australia")}&destination=${encodeURIComponent(dropoffLabel + ", Australia")}&mode=driving`
-      : null;
+  const hasMapData = !!(pickupLabel && dropoffLabel);
 
   return (
     <>
@@ -425,17 +505,17 @@ function TrackingContent() {
                     Pickup Details
                   </h2>
 
-                  <div className="flex gap-16 mb-5">
+                  <div className="flex flex-wrap gap-6 mb-5">
                     <div className="flex items-start gap-3">
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange/10 shrink-0">
                         <i className="fa-solid fa-location-dot text-loadlink-orange" />
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-sm font-bold text-loadlink-orange mb-1">
                           Pickup
                         </p>
-                        <p className="text-base font-bold text-loadlink-navy flex items-center gap-1">
-                          <i className="fa-solid fa-location-dot text-loadlink-orange text-sm" />
+                        <p className="text-base font-bold text-loadlink-navy flex items-start gap-1 break-words">
+                          <i className="fa-solid fa-location-dot text-loadlink-orange text-sm mt-1 shrink-0" />
                           {pickupLabel || "—"}
                         </p>
                       </div>
@@ -445,12 +525,12 @@ function TrackingContent() {
                       <div className="flex items-center justify-center w-10 h-10 rounded-full bg-loadlink-orange/10 shrink-0">
                         <i className="fa-solid fa-truck text-loadlink-orange" />
                       </div>
-                      <div>
+                      <div className="min-w-0">
                         <p className="text-sm font-bold text-loadlink-orange mb-1">
                           Dropoff
                         </p>
-                        <p className="text-base font-bold text-loadlink-navy flex items-center gap-1">
-                          <i className="fa-solid fa-location-dot text-green-500 text-sm" />
+                        <p className="text-base font-bold text-loadlink-navy flex items-start gap-1 break-words">
+                          <i className="fa-solid fa-location-dot text-green-500 text-sm mt-1 shrink-0" />
                           {dropoffLabel || "—"}
                         </p>
                       </div>
@@ -458,19 +538,11 @@ function TrackingContent() {
                   </div>
 
                   {/* Map */}
-                  {mapSrc ? (
-                    <div className="rounded-xl overflow-hidden border border-gray-100 w-full h-96 bg-gray-50">
-                      <iframe
-                        src={mapSrc}
-                        width="100%"
-                        height="100%"
-                        style={{ border: 0 }}
-                        allowFullScreen
-                        loading="lazy"
-                        referrerPolicy="no-referrer-when-downgrade"
-                        title="Route map"
-                      />
-                    </div>
+                  {hasMapData ? (
+                    <RouteMap
+                      origin={`${pickupLabel}, Australia`}
+                      destination={`${dropoffLabel}, Australia`}
+                    />
                   ) : (
                     <div className="rounded-xl bg-gray-100 flex items-center justify-center h-44">
                       <p className="text-gray-400 text-sm">
