@@ -221,7 +221,7 @@ export default function Hero() {
               <Link
                 key={index}
                 href={service.href}
-                className={`group relative backdrop-blur-xl ${service.bgColor} border-2 ${service.borderColor} rounded-2xl p-5 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden flex-1 min-h-[160px] flex flex-col items-center justify-center text-center`}
+                className={`group relative backdrop-blur-xl ${service.bgColor} border-2 ${service.borderColor} rounded-2xl p-4 transition-all duration-300 hover:shadow-xl hover:-translate-y-2 overflow-hidden flex-1 h-36 flex flex-col items-center justify-center text-center`}
               >
                 {/* Background Image */}
                 <div className="absolute inset-0 opacity-40 group-hover:opacity-55 transition-opacity duration-300">
@@ -234,16 +234,16 @@ export default function Hero() {
                 </div>
 
                 {/* Content */}
-                <div className="relative z-10">
+                <div className="relative z-10 flex flex-col items-center gap-2">
                   <h2
-                    className={`text-base font-bold ${service.iconColor} mb-2 leading-tight px-1`}
+                    className={`text-sm font-bold ${service.iconColor} leading-tight px-1 text-center`}
                   >
                     {service.title}
                   </h2>
-                  <span className="inline-flex items-center gap-1.5 px-4 py-2 rounded-full border border-white/80 bg-white/70 text-gray-700 text-xs font-semibold transition-all duration-300 group-hover:bg-white group-hover:text-loadlink-navy">
+                  <span className="inline-flex items-center justify-center gap-1 px-2 py-1 rounded-full border border-white/80 bg-white/70 text-gray-700 text-[10px] font-semibold transition-all duration-300 group-hover:bg-white group-hover:text-loadlink-navy text-center leading-tight">
                     {service.cta}
                     <svg
-                      className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1"
+                      className="w-3 h-3 transition-transform duration-300 group-hover:translate-x-1 shrink-0"
                       fill="none"
                       stroke="currentColor"
                       viewBox="0 0 24 24"
@@ -256,11 +256,6 @@ export default function Hero() {
                       />
                     </svg>
                   </span>
-                  {"subtitle" in service && service.subtitle && (
-                    <p className="text-white font-semibold text-sm mt-2 leading-snug px-1">
-                      {service.subtitle}
-                    </p>
-                  )}
                 </div>
               </Link>
             ))}
